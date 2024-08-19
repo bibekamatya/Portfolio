@@ -6,7 +6,7 @@ import Skills from './components/skills';
 
 function App() {
   return (
-    <div className='px-44 bg-black text-white'>
+    <div className="px-44 bg-darkBlue text-white">
       <Navbar />
       <Hero />
       <Experiences />
