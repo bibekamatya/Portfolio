@@ -1,19 +1,17 @@
-import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
-
 export interface TabButtonProps {
   isActive: boolean;
   onClick: () => void;
-  icon: FontAwesomeIconProps['icon'];
+  icon: string;
   title: string;
 }
 
 interface Item {
-  icon: FontAwesomeIconProps['icon'];
+  icon: string;
   title: string;
 }
 
 interface Category {
-  icon: FontAwesomeIconProps['icon'];
+  icon: string;
   title: string;
   items: Item[];
 }
@@ -23,16 +21,21 @@ export interface TabbedContentProps {
 }
 
 export interface TabContentInfoCardProps {
-  icon: FontAwesomeIconProps['icon'];
+  icon: string;
   title: string;
   delay: number;
 }
 
 export interface TabContentProps {
   category: {
-    icon: FontAwesomeIconProps['icon'];
+    icon: string;
     title: string;
     items: Item[];
   };
   activeTab: number;
+}
+
+export interface IconProps {
+  icon: string;
+  className?: string;
 }

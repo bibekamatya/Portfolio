@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TabContentInfoCardProps } from '../../../interfaces';
+import Icon from '../Icons';
 
 const TabContentInfoCard = ({
   icon,
@@ -14,7 +14,7 @@ const TabContentInfoCard = ({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3, delay }}
     >
-      <FontAwesomeIcon icon={icon} className="h-8 w-8 text-skyBlue" />
+      <Icon icon={icon} className="h-8 w-8 text-skyBlue" />
       <span className="text-skyBlue text-xs text-center">{title}</span>
     </motion.div>
   );

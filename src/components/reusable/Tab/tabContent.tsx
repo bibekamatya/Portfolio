@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TabContentInfoCard from './tabContentInfoCard';
 import { TabContentProps } from '../../../interfaces';
+import Icon from '../Icons';
 
 const TabContent = ({ category, activeTab }: TabContentProps) => {
   return (
@@ -14,7 +14,7 @@ const TabContent = ({ category, activeTab }: TabContentProps) => {
       className="border-l-2 border-skyBlue py-3 px-6 rounded-lg shadow-lg"
     >
       <h3 className="text-skyBlue font-semibold mb-4 flex items-center">
-        <FontAwesomeIcon icon={category.icon} className="mr-2" />
+        <Icon icon={category.icon} className="mr-2" />
         {category.title}
       </h3>
       <div className="pl-6 space-y-2">
