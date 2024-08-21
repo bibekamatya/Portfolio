@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Header } from "./reusable/header";
 import Icon from "./reusable/Icons";
-import { GlowingCard } from './reusable/glowingCard';
+import { GlowingCard } from "./reusable/glowingCard";
 
 const Education = () => {
   const educationData = [
@@ -51,7 +51,7 @@ const Education = () => {
             whileHover={{ scale: 1.05 }}
           >
             {/* Card Content */}
-            <div className="p-4 shadow-lg rounded-lg border border-skyBlue flex flex-col items-center gap-2">
+            <div className="p-4 shadow-lg rounded-lg h-full border border-skyBlue flex flex-col items-center gap-2">
               <div className="flex items-center justify-center h-16 w-16 border-2 border-skyBlue rounded-full mb-2">
                 <Icon icon={edu.icon} className="h-8 w-8 text-skyBlue" />
               </div>
@@ -83,7 +83,10 @@ const Education = () => {
           >
             <GlowingCard>
               {/* <div className="flex items-center justify-center h-10 w-10 border-2 border-skyBlue rounded-full mb-2"> */}
-              <Icon icon="graduationCap" className="h-8 w-8 text-skyBlue mb-5" />
+              <Icon
+                icon="graduationCap"
+                className="h-8 w-8 text-skyBlue mb-5"
+              />
               {/* </div> */}
               <h3 className="text-xl font-semibold text-skyBlue">
                 {edu.degree}
@@ -97,7 +100,6 @@ const Education = () => {
                 {edu.address} {edu.year}
               </p>
             </GlowingCard>
-
           </motion.div>
         ))}
       </div>

@@ -14,7 +14,7 @@ export default {
         transparent: "transparent",
         lightBlue: "#1b2a47",
         darkBlue: "#152036",
-        skyBlue: "#04c4ff",
+        skyBlue: "#0ef",
         background:"#262626",
         textColor: "#cbd5e0",
       },

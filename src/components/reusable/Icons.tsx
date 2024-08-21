@@ -4,10 +4,11 @@ import {
   faGitAlt,
   faBootstrap,
   faNodeJs,
+  faLinkedinIn,
+  faGitlab,
 } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
 import {
   faCalendarAlt,
@@ -45,8 +46,9 @@ import { faComputer } from "@fortawesome/free-solid-svg-icons/faComputer";
 const iconMap = {
   fileDownload: faFileArrowDown,
   download: faDownload,
-  gitHub: faGithub,
-  linkedIn: faLinkedin,
+  github: faGithub,
+  gitlab: faGitlab,
+  linkedIn: faLinkedinIn,
   react: faReact,
   html: faHtml5,
   css: faCss3Alt,

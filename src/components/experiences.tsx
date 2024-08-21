@@ -87,7 +87,7 @@ const ExperienceSection = () => {
     },
   ];
 
-  const skyBlue = "#04c4ff";
+  const skyBlue = "#0ef";
 
   return (
     <section>
