@@ -1,20 +1,20 @@
-import Icon from './reusable/Icons';
+import Icon from "./reusable/Icons";
 
 const Hero = () => {
   return (
-    <div className="flex gap-20 mt-16 h-[calc(100vh-64px)]">
+    <div className="flex md:flex-row flex-col gap-20 mt-16 md:h-[calc(100vh-64px)] h-full">
       {/* Text Section */}
       <div className="flex-1 flex flex-col justify-center text-white p-8 h-full">
         <h3 className="text-4xl font-bold">Hi, I am</h3>
         <h3 className="text-4xl font-bold text-orange-500">
           Hom Narayan Amatya
         </h3>
-        <h6 className="text-2xl mt-4 font-semibold">I am a UI/UX Designer</h6>
-        <p className="mt-4">
-          In publishing and graphic design, Lorem ipsum is a placeholder text
-          commonly used to demonstrate the visual form of a document or a
-          typeface without relying on meaningful content. Lorem ipsum may be
-          used as a placeholder before the final copy is available.
+        <h6 className="text-2xl mt-4 font-semibold">I am a UI/UX Developer </h6>
+        <p className="mt-4 text-justify">
+          I'm a UI/UX Developer who creates engaging and user-friendly
+          interfaces. I blend design and development skills to deliver seamless,
+          intuitive experiences. Passionate about turning ideas into elegant
+          solutions.
         </p>
         <div className="flex gap-4 items-center mt-10">
           <button className="px-4 py-1.5 bg-skyBlue rounded-md text-gray-800 font-semibold hover:bg-sky-500 transition-all duration-500 ease-in-out">

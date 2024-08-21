@@ -4,25 +4,29 @@ import {
   faGitAlt,
   faBootstrap,
   faNodeJs,
-} from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
-import { faHtml5 } from '@fortawesome/free-brands-svg-icons/faHtml5';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
-import { faReact } from '@fortawesome/free-brands-svg-icons/faReact';
+} from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
+import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
 import {
+  faCalendarAlt,
   faClock,
   faCogs,
+  faGraduationCap,
   faLightbulb,
   faNetworkWired,
   faPalette,
   faPeopleArrows,
+  faSchool,
   faTerminal,
   faToolbox,
-} from '@fortawesome/free-solid-svg-icons';
-import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons/faFileArrowDown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProps } from '../../interfaces';
+  faUniversity,
+} from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons/faFileArrowDown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProps } from "../../interfaces";
 import {
   antDLogo,
   muiLogo,
@@ -34,7 +38,8 @@ import {
   eslintLogo,
   tsLogo,
   reduxLogo,
-} from '../logos/logos';
+} from "../logos/logos";
+import { faComputer } from "@fortawesome/free-solid-svg-icons/faComputer";
 
 // Map of icon names to FontAwesome icons
 const iconMap = {
@@ -57,6 +62,11 @@ const iconMap = {
   clock: faClock,
   code: faTerminal,
   setting: faCogs,
+  computer: faComputer,
+  calendar: faCalendarAlt,
+  graduationCap: faGraduationCap,
+  school: faSchool,
+  university: faUniversity,
   mui: muiLogo,
   tailwind: tailwindLogo,
   antd: antDLogo,
@@ -79,13 +89,13 @@ const iconMap = {
 //   ) : null;
 // }
 
-export default function Icon({ icon, className = '' }: IconProps) {
+export default function Icon({ icon, className = "" }: IconProps) {
   // @ts-ignore
   const iconToRender = iconMap[icon];
 
   // If the icon is a FontAwesome icon
   if (
-    typeof iconToRender === 'object' &&
+    typeof iconToRender === "object" &&
     iconToRender.prefix &&
     iconToRender.iconName
   ) {
@@ -93,7 +103,7 @@ export default function Icon({ icon, className = '' }: IconProps) {
   }
 
   // If the icon is a React component like muiLogo
-  if (typeof iconToRender === 'function') {
+  if (typeof iconToRender === "function") {
     const CustomIcon = iconToRender;
     return <CustomIcon className={className} />;
   }

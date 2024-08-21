@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import TabContentInfoCard from './tabContentInfoCard';
-import { TabContentProps } from '../../../interfaces';
-import Icon from '../Icons';
+import { motion } from "framer-motion";
+import { TabContentInfoCard, TabContentInfoCard1 } from "./tabContentInfoCard";
+import { TabContentProps } from "../../../interfaces";
+import Icon from "../Icons";
 
 const TabContent = ({ category, activeTab }: TabContentProps) => {
   return (
@@ -18,9 +18,21 @@ const TabContent = ({ category, activeTab }: TabContentProps) => {
         {category.title}
       </h3>
       <div className="pl-6 space-y-2">
-        <div className="grid grid-cols-6 gap-3">
+        <div className="grid grid-cols-6 gap-6">
           {category.items.map((item, idx) => (
             <TabContentInfoCard
+              key={idx}
+              icon={item.icon}
+              title={item.title}
+              delay={idx * 0.1}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="pl-6 space-y-2 mt-20">
+        <div className="grid grid-cols-6 gap-6">
+          {category.items.map((item, idx) => (
+            <TabContentInfoCard1
               key={idx}
               icon={item.icon}
               title={item.title}

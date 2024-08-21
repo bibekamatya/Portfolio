@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import TabButton from './tabButton';
-import TabContent from './tabContent';
-import { TabbedContentProps } from '../../../interfaces';
+import { useState } from "react";
+import TabButton from "./tabButton";
+import TabContent from "./tabContent";
+import { TabbedContentProps } from "../../../interfaces";
 
 const Tab = ({ categories }: TabbedContentProps) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -9,7 +9,7 @@ const Tab = ({ categories }: TabbedContentProps) => {
   return (
     <div>
       <div className="relative flex justify-center mb-8">
-        <div className="relative z-10 flex space-x-4 w-full">
+        <div className="relative z-10 flex space-x-4 w-full justify-center">
           {categories.map((category, index) => (
             <TabButton
               key={index}
