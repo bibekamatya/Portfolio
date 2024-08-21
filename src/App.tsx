@@ -14,7 +14,7 @@ function App() {
       <div className="lg:px-44 px-5 bg-darkBlue text-white space-y-40">
         <Hero />
         <Experiences />
-        {/* <Skills /> */}
+        <Skills />
         <Education />
         <Projects />
       </div>
