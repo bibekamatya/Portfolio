@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Header } from "./reusable/header";
 import Icon from "./reusable/Icons";
-import { GlowingCard } from "./reusable/glowingCard";
 
 const Education = () => {
   const educationData = [

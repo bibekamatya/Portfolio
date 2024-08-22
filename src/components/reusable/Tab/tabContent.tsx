@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TabContentInfoCard, TabContentInfoCard1 } from "./tabContentInfoCard";
+import TabContentInfoCard from "./tabContentInfoCard";
 import { TabContentProps } from "../../../interfaces";
 import Icon from "../Icons";
 

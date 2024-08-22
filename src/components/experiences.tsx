@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+// import { motion } from "framer-motion";
+// import { useRef, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -9,8 +9,8 @@ import Icon from "./reusable/Icons";
 import { Header } from "./reusable/header";
 
 const ExperienceSection = () => {
-  const refs = useRef<(HTMLDivElement | null)[]>([]);
-  const [isHovered, setIsHovered] = useState<number | null>(null);
+  // const refs = useRef<(HTMLDivElement | null)[]>([]);
+  // const [isHovered, setIsHovered] = useState<number | null>(null);
 
   const experiences = [
     {
