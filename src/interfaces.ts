@@ -39,3 +39,20 @@ export interface IconProps {
   icon: string;
   className?: string;
 }
+
+// export type LogoName =
+//   | "mui"
+//   | "tailwind"
+//   | "antd"
+//   | "postman"
+//   | "graphql"
+//   | "vercel"
+//   | "jest"
+//   | "eslint"
+//   | "ts"
+//   | "redux";
+
+export interface LogoData {
+  src: string;
+  alt: string;
+}

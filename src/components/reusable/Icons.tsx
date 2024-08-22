@@ -28,18 +28,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons/faFileArrowDown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProps } from "../../interfaces";
-import {
-  antDLogo,
-  muiLogo,
-  postmanLogo,
-  tailwindLogo,
-  graphqlLogo,
-  vercelLogo,
-  jestLogo,
-  eslintLogo,
-  tsLogo,
-  reduxLogo,
-} from "../logos/logos";
+import Logo from "../logos/logos";
 import { faComputer } from "@fortawesome/free-solid-svg-icons/faComputer";
 
 // Map of icon names to FontAwesome icons
@@ -69,45 +58,30 @@ const iconMap = {
   graduationCap: faGraduationCap,
   school: faSchool,
   university: faUniversity,
-  mui: muiLogo,
-  tailwind: tailwindLogo,
-  antd: antDLogo,
-  postman: postmanLogo,
-  graphql: graphqlLogo,
-  vercel: vercelLogo,
-  jest: jestLogo,
-  eslint: eslintLogo,
-  ts: tsLogo,
-  redux: reduxLogo,
+  mui: "mui",
+  tailwind: "tailwind",
+  antd: "antd",
+  postman: "postman",
+  graphql: "graphql",
+  vercel: "vercel",
+  jest: "jest",
+  eslint: "eslint",
+  ts: "ts",
+  redux: "redux",
 };
-
-// export default function Icon({ icon, className = '' }: IconProps) {
-//   // @ts-ignore
-//   const iconToRender = iconMap[icon];
-
-//   // Return the icon if it exists in the iconMap
-//   return iconToRender ? (
-//     <FontAwesomeIcon icon={iconToRender} className={className} />
-//   ) : null;
-// }
 
 export default function Icon({ icon, className = "" }: IconProps) {
   // @ts-ignore
   const iconToRender = iconMap[icon];
 
   // If the icon is a FontAwesome icon
-  if (
-    typeof iconToRender === "object" &&
-    iconToRender.prefix &&
-    iconToRender.iconName
-  ) {
+  if (iconToRender && typeof iconToRender !== "string") {
     return <FontAwesomeIcon icon={iconToRender} className={className} />;
   }
 
-  // If the icon is a React component like muiLogo
-  if (typeof iconToRender === "function") {
-    const CustomIcon = iconToRender;
-    return <CustomIcon className={className} />;
+  // If the icon is a custom logo
+  if (typeof iconToRender === "string") {
+    return <Logo name={iconToRender} />;
   }
 
   // Return null if the icon is not found

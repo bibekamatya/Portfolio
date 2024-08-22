@@ -99,7 +99,7 @@ const ExperienceSection = () => {
               color: "black",
               borderBottom: `1px solid ${skyBlue}`,
               boxShadow: "0 12px 24px rgba(0, 0, 0, 0.9)",
-              borderRadius:"1.1rem"
+              borderRadius: "1.1rem",
             }}
             contentArrowStyle={{
               borderRight: `10px solid #1b2a47`,
@@ -132,7 +132,7 @@ const ExperienceSection = () => {
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
-{/* 
+      {/* 
       <div className="mt-40">
         <Header header="Experiences" />
         <div className="space-y-4">

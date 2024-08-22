@@ -1,3 +1,4 @@
+import React from "react";
 import mui from "../../assets/icon-materialui.svg";
 import tailwind from "../../assets/icon-tailwindcss.svg";
 import antd from "../../assets/icon-ant-design.svg";
@@ -8,43 +9,28 @@ import jest from "../../assets/icon-jest.svg";
 import eslint from "../../assets/icon-eslint.svg";
 import ts from "../../assets/icon-ts.svg";
 import redux from "../../assets/icon-redux.svg";
+import { LogoData } from "../../interfaces";
 
-export const muiLogo = () => (
-  <img src={mui} className="h-8 w-8" alt="Material UI Logo" />
-);
+const logos: Record<string, LogoData> = {
+  mui: { src: mui, alt: "Material UI Logo" },
+  tailwind: { src: tailwind, alt: "Tailwind CSS Logo" },
+  antd: { src: antd, alt: "Ant Design Logo" },
+  postman: { src: postMan, alt: "Postman Logo" },
+  graphql: { src: graphql, alt: "GraphQL Logo" },
+  vercel: { src: vercel, alt: "Vercel Logo" },
+  jest: { src: jest, alt: "Jest Logo" },
+  eslint: { src: eslint, alt: "ESLint Logo" },
+  ts: { src: ts, alt: "TypeScript Logo" },
+  redux: { src: redux, alt: "Redux Logo" },
+};
 
-export const tailwindLogo = () => (
-  <img src={tailwind} className="h-8 w-8" alt="Material UI Logo" />
-);
+interface LogoProps {
+  name: string;
+}
 
-export const antDLogo = () => (
-  <img src={antd} className="h-8 w-8" alt="Material UI Logo" />
-);
+const Logo: React.FC<LogoProps> = ({ name }) => {
+  const logo = logos[name];
+  return <img src={logo.src} className="h-8 w-8" alt={logo.alt} />;
+};
 
-export const postmanLogo = () => (
-  <img src={postMan} className="h-8 w-8" alt="Material UI Logo" />
-);
-
-export const graphqlLogo = () => (
-  <img src={graphql} className="h-8 w-8" alt="Material UI Logo" />
-);
-
-export const vercelLogo = () => (
-  <img src={vercel} className="h-8 w-8" alt="Material UI Logo" />
-);
-
-export const jestLogo = () => (
-  <img src={jest} className="h-8 w-8" alt="Material UI Logo" />
-);
-
-export const eslintLogo = () => (
-  <img src={eslint} className="h-8 w-8" alt="Material UI Logo" />
-);
-
-export const tsLogo = () => (
-  <img src={ts} className="h-8 w-8" alt="Material UI Logo" />
-);
-
-export const reduxLogo = () => (
-  <img src={redux} className="h-8 w-8" alt="Material UI Logo" />
-);
+export default Logo;
