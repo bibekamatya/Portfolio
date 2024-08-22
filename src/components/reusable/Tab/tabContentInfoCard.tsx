@@ -26,4 +26,4 @@ const TabContentInfoCard = ({
   );
 };
 
-export default TabContentInfoCard
+export default TabContentInfoCard;

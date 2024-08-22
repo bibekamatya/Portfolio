@@ -133,7 +133,7 @@ const Projects = () => {
   return (
     <section>
       <Header header="Projects" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {projects.map((project, index) => (
           <div
             key={index}

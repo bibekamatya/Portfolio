@@ -11,11 +11,15 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
 import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
 import {
+  faAddressCard,
   faCalendarAlt,
   faClock,
   faCogs,
+  faEnvelope,
   faGraduationCap,
   faLightbulb,
+  faLocationDot,
+  faMobileRetro,
   faNetworkWired,
   faPalette,
   faPeopleArrows,
@@ -58,6 +62,9 @@ const iconMap = {
   graduationCap: faGraduationCap,
   school: faSchool,
   university: faUniversity,
+  address: faAddressCard,
+  phone: faMobileRetro,
+  email: faEnvelope,
   mui: "mui",
   tailwind: "tailwind",
   antd: "antd",
