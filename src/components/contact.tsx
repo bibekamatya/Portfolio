@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Icon from "./reusable/Icons";
 
-const ContactSection: React.FC = () => {
+const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -179,4 +179,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;
+export default Contact;
