@@ -6,22 +6,18 @@ const Hero = () => {
     <>
       <div className="flex lg:flex-row flex-col gap-10 lg:gap-20 mt-12 md:h-[calc(100vh-64px)] h-full">
         <div className="flex-1 flex flex-col justify-center text-white h-full order-2 lg:order-1">
-          <h3 className="text-4xl font-bold">Hi, I am</h3>
-          <h3 className="text-4xl font-bold text-orange-500/80 my-1">
+          <h3 className="md:text-4xl text-3xl font-bold text-orange-500/80 my-1">
             Hom Narayan Amatya
           </h3>
-          <div className="text-2xl mt-2 font-semibold">
-            <span>I am a </span>
-            <span className="text-skyBlue">
-              <Typewriter
-                words={["UI/UX Developer"]}
-                loop={Infinity} // Loop indefinitely
-                // cursor
-                typeSpeed={100} // Typing speed in milliseconds
-                deleteSpeed={50} // Deleting speed in milliseconds
-                delaySpeed={1000} // Delay between typing and deleting
-              />
-            </span>
+          <div className="md:text-2xl text-xl mt-2 font-semibold text-skyBlue">
+            <Typewriter
+              words={["UI/UX Developer"]}
+              loop={Infinity} // Loop indefinitely
+              // cursor
+              typeSpeed={100} // Typing speed in milliseconds
+              deleteSpeed={50} // Deleting speed in milliseconds
+              delaySpeed={1000} // Delay between typing and deleting
+            />
           </div>
           <p className="mt-4 text-justify text-gray-300">
             I'm a UI/UX Developer who creates engaging and user-friendly
@@ -40,7 +36,6 @@ const Hero = () => {
             className="lg:rounded-full rounded-md object-cover"
           />
         </div>
-
       </div>
     </>
   );

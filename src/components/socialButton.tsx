@@ -1,9 +1,14 @@
 import Icon from "./reusable/Icons";
+import cv from "../assets/CV-Hom Narayan Amatya.pdf";
 
 const socialLinks = [
-  { icon: "github", url: "https://github.com", title: "GitHub" },
-  { icon: "gitlab", url: "https://gitlab.com", title: "GitLab" },
-  { icon: "linkedIn", url: "https://www.linkedin.com", title: "LinkedIn" },
+  { icon: "github", url: "https://github.com/bibekamatya", title: "GitHub" },
+  { icon: "gitlab", url: "https://gitlab.com/bamatya", title: "GitLab" },
+  {
+    icon: "linkedIn",
+    url: "https://www.linkedin.com/in/bibek-amatya-50006815a/",
+    title: "LinkedIn",
+  },
 ];
 
 const SocialButtons = () => {
@@ -25,13 +30,15 @@ const SocialButtons = () => {
           </button>
         </a>
       ))}
-      <button className="px-3 py-2 bg-transparent rounded-full text-skyBlue font-semibold text-sm border border-skyBlue">
-        <Icon
-          icon="download"
-          className="group-hover:text-gray-300 transition-all duration-300 transform hover:scale-110 mr-2"
-        />
+      <a
+        href={cv}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-3 py-2 bg-transparent rounded-full transition-all duration-300 transform text-skyBlue hover:text-gray-300 font-semibold text-sm border border-skyBlue  hover:bg-gradient-to-r hover:from-sky-400 hover:to-cyan-600 hover:shadow-md hover:shadow-sky-500/50"
+      >
+        <Icon icon="download" className="mr-2" />
         Resume
-      </button>
+      </a>
     </div>
   );
 };

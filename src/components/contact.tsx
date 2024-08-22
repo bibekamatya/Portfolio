@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Icon from "./reusable/Icons";
+import { Header } from "./reusable/header";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -69,10 +70,11 @@ const Contact: React.FC = () => {
       id="contact"
       className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 lg:py-20"
     >
+      <Header header="Contact" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="font-heading font-bold tracking-tight text-3xl sm:text-5xl mb-6 text-sky-400">
+            <h2 className="font-heading font-bold tracking-tight text-3xl sm:text-5xl mb-6 text-skyBlue">
               Get in Touch
             </h2>
             <p className="mt-3 mb-8 text text-gray-300">
@@ -90,7 +92,7 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-sky-400">
+                    <h3 className="text-lg font-medium text-skyBlue">
                       {title}
                     </h3>
                     <p className="text-gray-300">{content}</p>
@@ -99,8 +101,8 @@ const Contact: React.FC = () => {
               ))}
             </ul>
           </div>
-          <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
-            <h2 className="mb-4 text-2xl font-bold text-white">
+          <div className="bg-gray-800 lg:p-8 p-4 rounded-lg shadow-lg">
+            <h2 className="mb-4 lg:text-2xl xl font-bold text-white">
               Let's Begin Our Journey Together
             </h2>
             <form id="contactForm" onSubmit={handleSubmit}>
