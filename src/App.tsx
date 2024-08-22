@@ -21,7 +21,6 @@ const sections = [
   { id: "skills", component: <Skills /> },
   { id: "education", component: <Education /> },
   { id: "projects", component: <Projects /> },
-  { id: "contact", component: <Contact /> },
 ];
 
 const Section: React.FC<SectionProps> = ({ id, component }) => (
@@ -35,11 +34,13 @@ const App = () => {
     <div>
       <Navbar />
       <div className="lg:px-44 px-5 bg-gradient-to-b from-gray-900 to-gray-800 text-white space-y-40 lg:pb-32 pb-20">
-        {" "}
         {sections.map(({ id, component }) => (
           <Section key={id} id={id} component={component} />
         ))}
       </div>
+      <Element name="contact" className="section">
+        <Contact />
+      </Element>
     </div>
   );
 };

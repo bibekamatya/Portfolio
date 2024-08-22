@@ -4,9 +4,9 @@ import SocialButtons from "./socialButton";
 const Hero = () => {
   return (
     <>
-      <div className="flex lg:flex-row flex-col gap-20 mt-12 md:h-[calc(100vh-64px)] h-full">
+      <div className="flex lg:flex-row flex-col gap-10 lg:gap-20 mt-12 md:h-[calc(100vh-64px)] h-full">
         {/* Text Section */}
-        <div className="flex-1 flex flex-col justify-center text-white h-full">
+        <div className="flex-1 flex flex-col justify-center text-white h-full order-2 lg:order-1">
           <h3 className="text-4xl font-bold">Hi, I am</h3>
           <h3 className="text-4xl font-bold text-orange-500/80 my-1">
             Hom Narayan Amatya
@@ -34,13 +34,14 @@ const Hero = () => {
         </div>
 
         {/* Image Section */}
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-center justify-center order-1 lg:order-2">
           <img
             src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/417544838_7281816731912373_4343179332867262888_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=9z2Z7mrUws8Q7kNvgG3iMbO&_nc_ht=scontent.fktm3-1.fna&oh=00_AYBTpoL7FTUwQMoXlcPCyMdCufqdpaPrrQtF_WATu8cESQ&oe=66C7A699"
             alt="Hom Narayan Amatya"
-            className="rounded-full w-96 h-96"
+            className="lg:rounded-full rounded-md object-cover"
           />
         </div>
+
       </div>
     </>
   );
