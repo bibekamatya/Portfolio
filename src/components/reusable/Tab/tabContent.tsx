@@ -18,21 +18,9 @@ const TabContent = ({ category, activeTab }: TabContentProps) => {
         {category.title}
       </h3>
       <div className="pl-6 space-y-2">
-        <div className="grid grid-cols-6 gap-6">
+        <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-6">
           {category.items.map((item, idx) => (
             <TabContentInfoCard
-              key={idx}
-              icon={item.icon}
-              title={item.title}
-              delay={idx * 0.1}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="pl-6 space-y-2 mt-20">
-        <div className="grid grid-cols-6 gap-6">
-          {category.items.map((item, idx) => (
-            <TabContentInfoCard1
               key={idx}
               icon={item.icon}
               title={item.title}

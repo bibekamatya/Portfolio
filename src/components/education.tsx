@@ -40,7 +40,7 @@ const Education = () => {
   return (
     <section>
       <Header header="Education" />
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
         {educationData.map((edu, idx) => (
           <motion.div
             key={idx}
@@ -51,9 +51,9 @@ const Education = () => {
             whileHover={{ scale: 1.05 }}
           >
             {/* Card Content */}
-            <div className="p-4 shadow-lg rounded-lg h-full border border-skyBlue flex flex-col items-center gap-2">
-              <div className="flex items-center justify-center h-16 w-16 border-2 border-skyBlue rounded-full mb-2">
-                <Icon icon={edu.icon} className="h-8 w-8 text-skyBlue" />
+            <div className="p-4 rounded-lg h-full custom-shadow border-b border-skyBlue flex flex-col items-center gap-2">
+              <div className="flex items-center justify-center h-14 w-14 border-2 border-skyBlue rounded-full mb-4">
+                <Icon icon="graduationCap" className="h-8 w-8 text-skyBlue" />
               </div>
               <h3 className="text-xl font-semibold text-skyBlue">
                 {edu.degree}
@@ -71,7 +71,7 @@ const Education = () => {
         ))}
       </div>
 
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-10 mt-40">
+      {/* <div className="grid md:grid-cols-3 grid-cols-1 gap-10 mt-40">
         {educationData.map((edu, idx) => (
           <motion.div
             key={idx}
@@ -82,12 +82,10 @@ const Education = () => {
             whileHover={{ scale: 1.05 }}
           >
             <GlowingCard>
-              {/* <div className="flex items-center justify-center h-10 w-10 border-2 border-skyBlue rounded-full mb-2"> */}
               <Icon
                 icon="graduationCap"
                 className="h-8 w-8 text-skyBlue mb-5"
               />
-              {/* </div> */}
               <h3 className="text-xl font-semibold text-skyBlue">
                 {edu.degree}
               </h3>
@@ -102,7 +100,7 @@ const Education = () => {
             </GlowingCard>
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

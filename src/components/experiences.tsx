@@ -97,11 +97,12 @@ const ExperienceSection = () => {
             contentStyle={{
               background: "transparent",
               color: "black",
-              border: `1px solid ${skyBlue}`,
-              boxShadow: "none",
+              borderBottom: `1px solid ${skyBlue}`,
+              boxShadow: "0 12px 24px rgba(0, 0, 0, 0.9)",
+              borderRadius:"1.1rem"
             }}
             contentArrowStyle={{
-              borderRight: `10px solid ${skyBlue}`,
+              borderRight: `10px solid #1b2a47`,
               marginTop: "2px",
             }}
             iconStyle={{ backgroundColor: skyBlue }}
@@ -131,49 +132,7 @@ const ExperienceSection = () => {
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
-
-      <VerticalTimeline className="mt-20">
-        {experiences.map((exp, index) => (
-          <VerticalTimelineElement
-            key={index}
-            contentStyle={{
-              background: "black",
-              color: "black",
-              border: `1px solid ${skyBlue}`,
-              boxShadow: "0 0 15px 5px rgba(0, 255, 255, 0.6)",
-            }}
-            contentArrowStyle={{
-              borderRight: `10px solid ${skyBlue}`,
-              marginTop: "2px",
-            }}
-            iconStyle={{ backgroundColor: skyBlue }}
-            // @ts-ignore
-            date={
-              <span className="items-center">
-                <Icon icon="calendar" className="mr-2" />
-                {exp.duration}
-              </span>
-            }
-            iconClassName="mt-6 xl:!-ml-[8px] !ml-[11px] !h-4 !w-4"
-            dateClassName="text-skyBlue !opacity-100"
-          >
-            <div className="space-y-1 mb-5">
-              <h3 className="text-xl font-semibold text-skyBlue">{exp.role}</h3>
-              <h6 className="text-gray-300">
-                {exp.company}, {exp.location}
-              </h6>
-            </div>
-            <ul className="list-disc pl-6 space-y-2">
-              {exp.details.map((detail, idx) => (
-                <li key={idx} className="text-gray-400 text-sm">
-                  {detail}
-                </li>
-              ))}
-            </ul>
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
-
+{/* 
       <div className="mt-40">
         <Header header="Experiences" />
         <div className="space-y-4">
@@ -219,7 +178,7 @@ const ExperienceSection = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

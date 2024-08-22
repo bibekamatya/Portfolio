@@ -5,3 +5,7 @@
 .vertical-timeline.vertical-timeline--two-columns {
   width: 100%;
 }
+
+.custom-shadow {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+}

@@ -137,7 +137,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative overflow-hidden grid"
+            className="relative overflow-hidden grid custom-shadow rounded-lg"
             onMouseEnter={() => setIsHovered(index)}
             onMouseLeave={() => setIsHovered(null)}
           >

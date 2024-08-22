@@ -4,7 +4,7 @@ import SocialButtons from "./socialButton";
 const Hero = () => {
   return (
     <>
-      <div className="flex lg:flex-row flex-col gap-20 mt-16 md:h-[calc(100vh-64px)] h-full">
+      <div className="flex lg:flex-row flex-col gap-20 mt-12 md:h-[calc(100vh-64px)] h-full">
         {/* Text Section */}
         <div className="flex-1 flex flex-col justify-center text-white h-full">
           <h3 className="text-4xl font-bold">Hi, I am</h3>

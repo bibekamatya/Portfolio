@@ -11,7 +11,7 @@ export const TabContentInfoCard = ({
   return (
     <>
       <motion.div
-        className="text-md flex items-center justify-center flex-col p-2 border border-skyBlue rounded-xl gap-4 h-28 w-full"
+        className="text-md flex items-center justify-center flex-col p-2 border-b border-skyBlue rounded-xl gap-4 h-28 w-full custom-shadow"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, delay }}
@@ -45,7 +45,7 @@ export const TabContentInfoCard1 = ({
         transition: { duration: 0.3, delay: 0.1 },
       }}
     >
-      <GlowingCard glow="shadow-[0_0_10px_5px_rgba(0,255,255,0.6)]">
+      <GlowingCard glow="shadow-[0_0_5px_5px_rgba(0,255,255,0.6)]">
         <div className="flex flex-col items-center gap-4 w-full">
           <Icon icon={icon} className="h-8 w-8 text-skyBlue" />
           <span className="text-skyBlue text-xs text-center">{title}</span>
