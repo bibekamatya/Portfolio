@@ -11,7 +11,7 @@ const TabContent = ({ category, activeTab }: TabContentProps) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5 }}
-      className="border-l-2 border-skyBlue py-3 px-6 rounded-lg shadow-lg"
+      className="border-l-2 border-skyBlue py-3 px-6 rounded-lg"
     >
       <h3 className="text-skyBlue font-semibold mb-4 flex items-center">
         <Icon icon={category.icon} className="mr-2" />
