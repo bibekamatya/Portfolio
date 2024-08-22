@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
 
         {/* Image Section */}
-        <div className="flex-1 flex items-center justify-center order-1 lg:order-2 lg:mt-5">
+        <div className="flex-1 flex items-center justify-center order-1 lg:order-2 lg:mt-0 mt-5">
           <img
             src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/417544838_7281816731912373_4343179332867262888_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=9z2Z7mrUws8Q7kNvgG3iMbO&_nc_ht=scontent.fktm3-1.fna&oh=00_AYBTpoL7FTUwQMoXlcPCyMdCufqdpaPrrQtF_WATu8cESQ&oe=66C7A699"
             alt="Hom Narayan Amatya"
