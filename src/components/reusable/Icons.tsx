@@ -18,7 +18,6 @@ import {
   faEnvelope,
   faGraduationCap,
   faLightbulb,
-  faLocationDot,
   faMobileRetro,
   faNetworkWired,
   faPalette,
