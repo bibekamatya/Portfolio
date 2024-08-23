@@ -5,7 +5,7 @@ const Navbar = () => {
   const [active, setActive] = useState("About");
 
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 shadow-md">
+    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 shadow-md md:block hidden">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           to="About"
