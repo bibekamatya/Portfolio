@@ -1,5 +1,3 @@
-// import { motion } from "framer-motion";
-// import { useRef, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -7,91 +5,16 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import Icon from "./reusable/Icons";
 import { Header } from "./reusable/header";
+import { EXPERIENCES_DATA } from "../dataSheet";
 
-const ExperienceSection = () => {
-  // const refs = useRef<(HTMLDivElement | null)[]>([]);
-  // const [isHovered, setIsHovered] = useState<number | null>(null);
-
-  const experiences = [
-    {
-      role: "Frontend Developer",
-      company: "Clove.IT Pvt. Ltd",
-      location: "Biratnagar, Nepal",
-      duration: "Sep 2022 - PRESENT",
-      details: [
-        "Built and maintained responsive React.js applications.",
-        "Collaborated closely with design and backend teams.",
-        "Optimized application performance for faster load times.",
-        "Implemented best practices for code quality, scalability, and maintainability.",
-      ],
-    },
-    {
-      role: "Frontend Developer",
-      company: "AppX Technologies Pvt. Ltd",
-      location: "Nepal",
-      duration: "Part time, Tasks based, 2024",
-      details: [
-        "Developed and maintained React.js applications.",
-        "Enhanced existing features and improved user interfaces.",
-        "Adapted quickly to changing requirements.",
-        "Ensured timely delivery of tasks.",
-      ],
-    },
-    {
-      role: "Jr. Frontend Developer",
-      company: "CodAvatar Tech Pvt. Ltd",
-      location: "Kathmandu, Nepal",
-      duration: "June 2022 - Sep 2022",
-      details: [
-        "Assisted in maintaining dynamic, responsive web applications using React.js.",
-        "Supported senior developers in implementing new features.",
-        "Gained hands-on experience in modern front-end development practices.",
-      ],
-    },
-    {
-      role: "Retail Support Officer",
-      company: "WorldLink Communications Pvt. Ltd",
-      location: "Itahari, Nepal",
-      duration: "Sep 2019 - Feb 2020",
-      details: [
-        "Provided technical support to users.",
-        "Resolved service-related inquiries and issues.",
-        "Assisted in the installation and configuration of network equipment.",
-        "Guided customers on network usage and maintenance.",
-      ],
-    },
-    {
-      role: "Frontend Developer",
-      company: "Zeftware Solutions Pvt. Ltd",
-      location: "Biratnagar, Nepal",
-      duration: "May 2018 - Jun 2019",
-      details: [
-        "Developed static websites.",
-        "Implemented UI/UX designs.",
-        "Collaborated with designers to translate visual concepts into code.",
-      ],
-    },
-    {
-      role: "Technical Support Officer",
-      company: "Zeftware Solutions Pvt. Ltd",
-      location: "Biratnagar, Nepal",
-      duration: "Oct 2017 - Mar 2018",
-      details: [
-        "Provided technical assistance to users.",
-        "Diagnosed and resolved software-related issues.",
-        "Supported end-users with software installation and configuration.",
-        "Delivered training and guidance to users.",
-      ],
-    },
-  ];
-
+const Experiences = () => {
   const skyBlue = "#0ef";
 
   return (
-    <section>
+    <>
       <Header header="Experiences" />
       <VerticalTimeline>
-        {experiences.map((exp, index) => (
+        {EXPERIENCES_DATA.map((exp, index) => (
           <VerticalTimelineElement
             key={index}
             contentStyle={{
@@ -179,8 +102,8 @@ const ExperienceSection = () => {
           ))}
         </div>
       </div> */}
-    </section>
+    </>
   );
 };
 
-export default ExperienceSection;
+export default Experiences;

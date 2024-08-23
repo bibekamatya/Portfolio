@@ -1,46 +1,14 @@
 import { motion } from "framer-motion";
 import { Header } from "./reusable/header";
 import Icon from "./reusable/Icons";
+import { EDUCATION_DATA } from "../dataSheet";
 
 const Education = () => {
-  const educationData = [
-    {
-      degree: "Bachelors Degree",
-      field: "B.SC.CSIT",
-      institution: "Himalaya Darshan College",
-      address: "Biratnagar, Morang, Nepal",
-      board: "TU",
-      year: 2022,
-      percentage: "63%",
-      icon: "graduationCap",
-    },
-    {
-      degree: "High School",
-      field: "Science",
-      institution: "Kanchanjunga Higher Secondary School",
-      address: "Biratnagar, Morang, Nepal",
-      board: "HSEB",
-      year: 2013,
-      percentage: "62%",
-      icon: "school",
-    },
-    {
-      degree: "SLC",
-      field: "",
-      institution: "Shree Janta Higher Secondary School",
-      address: "Deaury, Udayapur, Nepal",
-      board: "Nepal Education Board",
-      year: 2010,
-      percentage: "56%",
-      icon: "university",
-    },
-  ];
-
   return (
-    <section>
+    <>
       <Header header="Education" />
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
-        {educationData.map((edu, idx) => (
+        {EDUCATION_DATA.map((edu, idx) => (
           <motion.div
             key={idx}
             className="relative"
@@ -100,7 +68,7 @@ const Education = () => {
           </motion.div>
         ))}
       </div> */}
-    </section>
+    </>
   );
 };
 

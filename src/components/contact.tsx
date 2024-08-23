@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Icon from "./reusable/Icons";
 import { Header } from "./reusable/header";
+import { CONTACT_DETAILS } from "../dataSheet";
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,24 +13,6 @@ const Contact: React.FC = () => {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
-
-  const contactDetails = [
-    {
-      icon: "address",
-      title: "Address",
-      content: "Gaighat, Udayapur, Nepal",
-    },
-    {
-      icon: "email",
-      title: "Email",
-      content: "narayanhom@gmail.com",
-    },
-    {
-      icon: "phone",
-      title: "Phone",
-      content: "+977-9800000000",
-    },
-  ];
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -66,10 +49,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 lg:py-20"
-    >
+    <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 lg:py-20">
       <Header header="Contact" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -83,7 +63,7 @@ const Contact: React.FC = () => {
               create something amazing together!
             </p>
             <ul className="space-y-6">
-              {contactDetails.map(({ icon, title, content }) => (
+              {CONTACT_DETAILS.map(({ icon, title, content }) => (
                 <li key={title} className="flex items-center">
                   <div className="h-10 w-10 flex items-center justify-center bg-transparent border-2 border-skyBlue rounded-full p-2 cursor-pointer transition-all duration-300">
                     <Icon
@@ -177,7 +157,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

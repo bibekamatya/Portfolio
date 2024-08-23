@@ -13,3 +13,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+.active {
+  color: aqua !important;
+}
+body {
+  padding: 0;
+  margin: 0;
+}

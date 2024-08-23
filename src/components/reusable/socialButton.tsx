@@ -1,5 +1,5 @@
-import Icon from "./reusable/Icons";
-import cv from "../assets/CV-Hom Narayan Amatya.pdf";
+import Icon from "./Icons";
+import cv from "../../assets/CV-Hom Narayan Amatya.pdf";
 
 const socialLinks = [
   { icon: "github", url: "https://github.com/bibekamatya", title: "GitHub" },

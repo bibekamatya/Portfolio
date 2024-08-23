@@ -40,17 +40,10 @@ export interface IconProps {
   className?: string;
 }
 
-// export type LogoName =
-//   | "mui"
-//   | "tailwind"
-//   | "antd"
-//   | "postman"
-//   | "graphql"
-//   | "vercel"
-//   | "jest"
-//   | "eslint"
-//   | "ts"
-//   | "redux";
+export interface SectionProps {
+  title: string;
+  component: React.ReactNode;
+}
 
 export interface LogoData {
   src: string;
