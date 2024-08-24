@@ -16,7 +16,7 @@ const Details = () => {
     return null;
   }
 
-  return <div>{data.title}</div>;
+  return <div className="text-white">{data.title}</div>;
 };
 
 export default Details;

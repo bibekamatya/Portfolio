@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 function useDarkMode() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Retrieve the theme preference from localStorage or check system preference
     return (
       localStorage.getItem("theme") === "dark" ||
       (!("theme" in localStorage) &&
@@ -10,15 +11,12 @@ function useDarkMode() {
   });
 
   useEffect(() => {
+    // Apply the dark mode class to document.documentElement
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
-      document.body.classList.remove("body-light");
-      document.body.classList.add("body-dark");
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      document.body.classList.remove("body-dark");
-      document.body.classList.add("body-light");
       localStorage.setItem("theme", "light");
     }
   }, [isDarkMode]);

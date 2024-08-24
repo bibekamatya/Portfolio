@@ -1,3 +1,18 @@
+/* :root {
+  --bg-light: #f40000;
+  --bg-dark: linear-gradient(to bottom, #1a202c, #2d3748);
+}
+
+body {
+  background-color: red;
+  color: var(--text-light);
+}
+
+.dark body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+} */
+
 .vertical-timeline::before {
   background-color: #04c4ff !important;
 }

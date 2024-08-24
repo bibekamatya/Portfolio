@@ -1,34 +1,20 @@
-import { Element } from "react-scroll";
+import "./index.css";
 import "./App.css";
-import Contact from "./components/contact";
-import { NAVITEMS as Sections } from "./dataSheet";
-import Navbar from "./components/navbar";
-import { SectionProps } from "./interfaces";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Details from "./components/details.tsx";
+import Index from "./index.tsx";
+import PageNotFound from "./components/pageNotFound.tsx";
+import Test from "./components/test.tsx";
 
-const Section = ({ title, component }: SectionProps) => (
-  <Element name={title} className="section lg:pb-32 pb-20">
-    {component}
-  </Element>
+export const App = () => (
+  <BrowserRouter>
+    <div className="min-h-screen bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/projects/:name" element={<Details />} />
+        <Route path="/*" element={<PageNotFound />} />
+        <Route path="/test" element={<Test />} />
+      </Routes>
+    </div>
+  </BrowserRouter>
 );
-
-const App = () => {
-  return (
-    <>
-      <Navbar />
-      <div className="lg:px-44 px-5">
-        {Sections.map(({ title, Component }) => (
-          <div key={title}>
-            {Component && (
-              <Section key={title} title={title} component={<Component />} />
-            )}
-          </div>
-        ))}
-      </div>
-      <Element name="Contact" className="section">
-        <Contact />
-      </Element>
-    </>
-  );
-};
-
-export default App;
