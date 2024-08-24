@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Header } from "./reusable/header";
 import { PROJECTS_DATA } from "../dataSheet";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
   const [isHovered, setIsHovered] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -33,7 +35,14 @@ const Projects = () => {
             >
               <h3 className="text-lg mb-2 text-skyBlue">{project.title}</h3>
               <p className="text-sm text-white p-2">{project.description}</p>
-              <button className="px-3 py-1 border border-skyBlue rounded-md mt-3 text-sm text-skyBlue hover:bg-skyBlue hover:text-black transition duration-500">
+              <button
+                onClick={() =>
+                  navigate(`/projects/${project.title.toLowerCase()}`, {
+                    state: project,
+                  })
+                }
+                className="px-3 py-1 border border-skyBlue rounded-md mt-3 text-sm text-skyBlue hover:bg-skyBlue hover:text-black transition duration-500"
+              >
                 Uncover More
               </button>
             </motion.div>

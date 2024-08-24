@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { NAVITEMS } from "../dataSheet";
+import useDarkMode from "../hooks/useDarkmode";
 const Navbar = () => {
   const [active, setActive] = useState("About");
+  const [isDarkMode, toggleDarkMode] = useDarkMode();
 
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 shadow-md md:block hidden">
@@ -40,6 +42,7 @@ const Navbar = () => {
                 {title}
               </Link>
             ))}
+            <button onClick={toggleDarkMode}>{isDarkMode ? "☀️" : "🌙"}</button>
           </div>
         </div>
       </div>

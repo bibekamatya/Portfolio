@@ -4,7 +4,8 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+  darkMode: 'class',
+    theme: {
     extend: {
       fontFamily: {
         Roboto: ["Roboto", "sans-serif"],
@@ -20,5 +21,16 @@ export default {
       },
     },
   },
-  plugins: [],
+ plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.body-light': {
+          backgroundColor: '#ffffff', // Light mode background color
+        },
+        '.body-dark': {
+          backgroundImage: 'linear-gradient(to bottom, #1a202c, #2d3748)',
+        },
+      });
+    },
+  ],
 }

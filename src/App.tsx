@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div className="lg:px-44 px-5 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+      <div className="lg:px-44 px-5">
         {Sections.map(({ title, Component }) => (
           <div key={title}>
             {Component && (
