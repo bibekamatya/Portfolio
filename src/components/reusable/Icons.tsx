@@ -33,6 +33,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProps } from "../../interfaces";
 import Logo from "../logos/logos";
 import { faComputer } from "@fortawesome/free-solid-svg-icons/faComputer";
+import { faSun } from "@fortawesome/free-regular-svg-icons/faSun";
+import { faMoon } from "@fortawesome/free-solid-svg-icons/faMoon";
 
 // Map of icon names to FontAwesome icons
 const iconMap = {
@@ -64,6 +66,8 @@ const iconMap = {
   address: faAddressCard,
   phone: faMobileRetro,
   email: faEnvelope,
+  sun: faSun,
+  moon: faMoon,
   mui: "mui",
   tailwind: "tailwind",
   antd: "antd",
