@@ -54,7 +54,7 @@ const Contact = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="font-heading font-bold tracking-tight text-3xl sm:text-5xl mb-6 text-skyBlue">
+            <h2 className="font-heading font-bold tracking-tight text-3xl sm:text-5xl mb-6 text-themeColor">
               Get in Touch
             </h2>
             <p className="mt-3 mb-8 text text-gray-300">
@@ -65,14 +65,14 @@ const Contact = () => {
             <ul className="space-y-6">
               {CONTACT_DETAILS.map(({ icon, title, content }) => (
                 <li key={title} className="flex items-center">
-                  <div className="h-10 w-10 flex items-center justify-center bg-transparent border-2 border-skyBlue rounded-full p-2 cursor-pointer transition-all duration-300">
+                  <div className="h-10 w-10 flex items-center justify-center bg-transparent border-2 border-themeColor rounded-full p-2 cursor-pointer transition-all duration-300">
                     <Icon
                       icon={icon}
-                      className="h-5 w-5 text-skyBlue group-hover:text-gray-300 transition-all duration-300 transform hover:scale-110"
+                      className="h-5 w-5 text-themeColor group-hover:text-gray-300 transition-all duration-300 transform hover:scale-110"
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-skyBlue">
+                    <h3 className="text-lg font-medium text-themeColor">
                       {title}
                     </h3>
                     <p className="text-gray-300">{content}</p>

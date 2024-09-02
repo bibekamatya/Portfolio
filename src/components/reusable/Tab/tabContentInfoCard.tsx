@@ -19,8 +19,8 @@ const TabContentInfoCard = ({
           transition: { duration: 0.3, delay: 0.1 },
         }}
       >
-        <Icon icon={icon} className="h-8 w-8 text-skyBlue" />
-        <span className="text-skyBlue text-xs text-center">{title}</span>
+        <Icon icon={icon} className="h-8 w-8 text-themeColor" />
+        <span className="text-themeColor text-xs text-center">{title}</span>
       </motion.div>
     </>
   );

@@ -33,7 +33,7 @@ const Projects = () => {
               }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-lg mb-2 text-skyBlue">{project.title}</h3>
+              <h3 className="text-lg mb-2 text-themeColor">{project.title}</h3>
               <p className="text-sm text-white p-2">{project.description}</p>
               <button
                 onClick={() =>
@@ -41,7 +41,7 @@ const Projects = () => {
                     state: project,
                   })
                 }
-                className="px-3 py-1 border border-skyBlue rounded-md mt-3 text-sm text-skyBlue hover:bg-skyBlue hover:text-black transition duration-500"
+                className="px-3 py-1 border border-themeColor rounded-md mt-3 text-sm text-themeColor hover:bg-themeColor hover:text-black transition duration-500"
               >
                 Uncover More
               </button>

@@ -1,13 +1,32 @@
+:root {
+  /* Light Mode Theme */
+  --theme-color: teal;
+  --border-color: #0ef;
+  --arrow-color: #ffffff;
+  --card-bg-color: #ffffff;
+  --custom-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  /* Dark Mode Theme */
+  --theme-color: #0ef;
+  --border-color: teal;
+  --arrow-color: #0ef;
+  --card-bg-color: transparent;
+  --custom-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+}
+
+.custom-shadow {
+  box-shadow: var(--custom-shadow);
+}
+
 .vertical-timeline::before {
-  background-color: #04c4ff !important;
+  background-color: var(--theme-color) !important;
 }
 
 .vertical-timeline.vertical-timeline--two-columns {
   width: 100%;
-}
-
-.custom-shadow {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
 }
 
 html {
@@ -15,7 +34,7 @@ html {
 }
 
 .active {
-  color: aqua !important;
+  color: var(--theme-color) !important;
 }
 
 body {

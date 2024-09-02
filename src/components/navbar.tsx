@@ -18,7 +18,7 @@ const Navbar = () => {
           prefix="500"
           className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
         >
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl dark:font-semibold font-bold whitespace-nowrap dark:text-white text-gray-900">
             Portfolio
           </span>
         </Link>
@@ -26,7 +26,7 @@ const Navbar = () => {
           className="items-center justify-between w-full md:flex md:w-auto md:order-1 hidden"
           id="navbar-sticky"
         >
-          <div className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <div className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
             {NAVITEMS.map(({ title }) => (
               <Link
                 key={title}
@@ -37,7 +37,7 @@ const Navbar = () => {
                 duration={500}
                 offset={-250}
                 onSetActive={() => setActive(title)}
-                className={`block rounded-md px-2 py-1 cursor-pointer ${active === title ? "active" : "text-white"}`}
+                className={`block rounded-md px-2 py-1 cursor-pointer ${active === title ? "active" : "dark:text-white text-gray-900"}`}
               >
                 {title}
               </Link>

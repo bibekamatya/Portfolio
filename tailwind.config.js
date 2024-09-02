@@ -15,9 +15,10 @@ export default {
         transparent: "transparent",
         lightBlue: "#1b2a47",
         darkBlue: "#152036",
-        skyBlue: "#0ef",
+        themeColor: "var(--theme-color)",
         background:"#262626",
         textColor: "#cbd5e0",
+        skyBlue:"#0ef"
       },
     },
   },

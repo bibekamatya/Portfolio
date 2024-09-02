@@ -18,11 +18,14 @@ const Education = () => {
             whileHover={{ scale: 1.05 }}
           >
             {/* Card Content */}
-            <div className="p-4 rounded-lg h-full custom-shadow border-b border-skyBlue flex flex-col items-center gap-2">
-              <div className="flex items-center justify-center h-14 w-14 border-2 border-skyBlue rounded-full mb-4">
-                <Icon icon="graduationCap" className="h-8 w-8 text-skyBlue" />
+            <div className="p-4 rounded-lg h-full custom-shadow border-b border-themeColor flex flex-col items-center gap-2">
+              <div className="flex items-center justify-center h-14 w-14 border-2 border-themeColor rounded-full mb-4">
+                <Icon
+                  icon="graduationCap"
+                  className="h-8 w-8 text-themeColor"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-skyBlue">
+              <h3 className="text-xl font-semibold text-themeColor">
                 {edu.degree}
               </h3>
               <p className=" text-gray-400">
@@ -51,9 +54,9 @@ const Education = () => {
             <GlowingCard>
               <Icon
                 icon="graduationCap"
-                className="h-8 w-8 text-skyBlue mb-5"
+                className="h-8 w-8 text-themeColor mb-5"
               />
-              <h3 className="text-xl font-semibold text-skyBlue">
+              <h3 className="text-xl font-semibold text-themeColor">
                 {edu.degree}
               </h3>
               <p className=" text-gray-400">

@@ -8,8 +8,6 @@ import { Header } from "./reusable/header";
 import { EXPERIENCES_DATA } from "../dataSheet";
 
 const Experiences = () => {
-  const skyBlue = "#0ef";
-
   return (
     <>
       <Header header="Experiences" />
@@ -18,17 +16,17 @@ const Experiences = () => {
           <VerticalTimelineElement
             key={index}
             contentStyle={{
-              background: "transparent",
-              color: "black",
-              borderBottom: `1px solid ${skyBlue}`,
-              boxShadow: "0 12px 24px rgba(0, 0, 0, 0.9)",
-              borderRadius: "1.1rem",
+              background: "var(--card-bg-color)", // Using the CSS variable
+              color: "var(--text-color)", // Using the CSS variable
+              borderBottom: `1px solid var(--theme-color)`, // Using the CSS variable
+              boxShadow: "var(--custom-shadow)",
+              borderRadius: ".5rem",
             }}
             contentArrowStyle={{
-              borderRight: `10px solid #1b2a47`,
+              borderRight: `10px solid var(--arrow-color)`, // Using the CSS variable
               marginTop: "2px",
             }}
-            iconStyle={{ backgroundColor: skyBlue }}
+            iconStyle={{ backgroundColor: "var(--theme-color)" }}
             // @ts-ignore
             date={
               <span className="items-center">
@@ -37,17 +35,22 @@ const Experiences = () => {
               </span>
             }
             iconClassName="mt-6 xl:!-ml-[8px] !ml-[11px] !h-4 !w-4"
-            dateClassName="text-skyBlue !opacity-100"
+            dateClassName="text-themeColor !opacity-100"
           >
             <div className="space-y-1 mb-5">
-              <h3 className="text-xl font-semibold text-skyBlue">{exp.role}</h3>
-              <h6 className="text-gray-300">
+              <h3 className="text-xl font-semibold text-themeColor">
+                {exp.role}
+              </h3>
+              <h6 className="dark:text-gray-300 text-gray-700 dark:font-normal font-semibold">
                 {exp.company}, {exp.location}
               </h6>
             </div>
             <ul className="list-disc pl-6 space-y-2">
               {exp.details.map((detail, idx) => (
-                <li key={idx} className="text-gray-400 text-sm">
+                <li
+                  key={idx}
+                  className="dark:text-gray-400 text-gray-700 text-sm"
+                >
                   {detail}
                 </li>
               ))}
@@ -74,7 +77,7 @@ const Experiences = () => {
             >
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                 <div>
-                  <h3 className={`text-xl font-semibold text-skyBlue`}>
+                  <h3 className={`text-xl font-semibold text-themeColor`}>
                     {exp.role}
                   </h3>
                   <p className="text-gray-300">

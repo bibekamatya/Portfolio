@@ -7,14 +7,14 @@ const TabButton = ({ isActive, onClick, icon, title }: TabButtonProps) => {
     <button
       onClick={onClick}
       className={`relative rounded-full font-medium transition
-        ${isActive ? "text-black" : "text-skyBlue"}
+        ${isActive ? "dark:text-black text-white" : "text-themeColor"}
         px-3 py-1.5
         flex items-center gap-2`}
     >
       {isActive && (
         <motion.span
           layoutId="bubble"
-          className="absolute inset-0 bg-skyBlue mix-blend-color-burn rounded-full"
+          className="absolute inset-0 bg-themeColor mix-blend-color-burn rounded-full"
           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
         />
       )}

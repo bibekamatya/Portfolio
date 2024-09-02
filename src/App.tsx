@@ -18,7 +18,7 @@ export const App = () => {
   }, [isDarkMode]);
 
   return (
-    <div className="min-h-screen dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gray-100 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
