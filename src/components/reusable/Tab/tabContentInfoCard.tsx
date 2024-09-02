@@ -9,7 +9,7 @@ const TabContentInfoCard = ({
   return (
     <>
       <motion.div
-        className="text-md flex items-center justify-center flex-col p-2 border-b border-skyBlue rounded-xl gap-4 h-28 w-full custom-shadow"
+        className="text-md flex items-center justify-center flex-col p-2 border-b border-themeColor rounded-xl gap-4 h-28 w-full custom-shadow"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, delay }}

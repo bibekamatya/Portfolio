@@ -6,10 +6,10 @@ import {
   faNodeJs,
   faLinkedinIn,
   faGitlab,
+  faReact,
+  faHtml5,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
-import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
 import {
   faAddressCard,
   faCalendarAlt,
@@ -26,17 +26,26 @@ import {
   faTerminal,
   faToolbox,
   faUniversity,
+  faDownload,
+  faFileArrowDown,
+  faComputer,
+  faMoon,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
-import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
-import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons/faFileArrowDown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProps } from "../../interfaces";
-import Logo from "../logos/logos";
-import { faComputer } from "@fortawesome/free-solid-svg-icons/faComputer";
-import { faSun } from "@fortawesome/free-regular-svg-icons/faSun";
-import { faMoon } from "@fortawesome/free-solid-svg-icons/faMoon";
 
-// Map of icon names to FontAwesome icons
+import { ReactComponent as MuiIcon } from "../../assets/icon-materialui.svg";
+import { ReactComponent as TailwindIcon } from "../../assets/icon-tailwindcss.svg";
+import { ReactComponent as AntdIcon } from "../../assets/icon-ant-design.svg";
+import { ReactComponent as PostmanIcon } from "../../assets/icon-postman.svg";
+import { ReactComponent as GraphqlIcon } from "../../assets/icon-graphql.svg";
+import { ReactComponent as VercelIcon } from "../../assets/icon-vercel.svg";
+import { ReactComponent as JestIcon } from "../../assets/icon-jest.svg";
+import { ReactComponent as EslintIcon } from "../../assets/icon-eslint.svg";
+import { ReactComponent as TsIcon } from "../../assets/icon-ts.svg";
+import { ReactComponent as ReduxIcon } from "../../assets/icon-redux.svg";
+
 const iconMap = {
   fileDownload: faFileArrowDown,
   download: faDownload,
@@ -68,30 +77,37 @@ const iconMap = {
   email: faEnvelope,
   sun: faSun,
   moon: faMoon,
-  mui: "mui",
-  tailwind: "tailwind",
-  antd: "antd",
-  postman: "postman",
-  graphql: "graphql",
-  vercel: "vercel",
-  jest: "jest",
-  eslint: "eslint",
-  ts: "ts",
-  redux: "redux",
+  mui: MuiIcon,
+  tailwind: TailwindIcon,
+  antd: AntdIcon,
+  postman: PostmanIcon,
+  graphql: GraphqlIcon,
+  vercel: VercelIcon,
+  jest: JestIcon,
+  eslint: EslintIcon,
+  ts: TsIcon,
+  redux: ReduxIcon,
 };
 
 export default function Icon({ icon, className = "" }: IconProps) {
   // @ts-ignore
   const iconToRender = iconMap[icon];
 
-  // If the icon is a FontAwesome icon
-  if (iconToRender && typeof iconToRender !== "string") {
+  // Check if the icon is a FontAwesome icon
+  if (
+    iconToRender &&
+    typeof iconToRender !== "string" &&
+    (iconToRender as any).icon
+  ) {
     return <FontAwesomeIcon icon={iconToRender} className={className} />;
   }
 
-  // If the icon is a custom logo
-  if (typeof iconToRender === "string") {
-    return <Logo name={iconToRender} />;
+  // Check if the icon is an SVG component
+  if (typeof iconToRender === "function") {
+    const SvgComponent = iconToRender as React.FunctionComponent<
+      React.SVGProps<SVGSVGElement>
+    >;
+    return <SvgComponent className={className} />;
   }
 
   // Return null if the icon is not found

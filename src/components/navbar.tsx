@@ -44,13 +44,20 @@ const Navbar = () => {
                   {title}
                 </Link>
               ))}
-              <button className="text-themeColor" onClick={toggleDarkMode}>{<Icon icon={!isDarkMode ? "sun" : "moon"} />}</button>
+              <button className="text-themeColor" onClick={toggleDarkMode}>
+                {<Icon icon={!isDarkMode ? "sun" : "moon"} />}
+              </button>
             </div>
           </div>
         </div>
       </nav>
       <div className="flex md:hidden">
-        <button className="bottom-1 bg-themeColor text-white z-50 text-themeColor fixed right-1 shadow-xl rounded-full h-10 w-10" onClick={toggleDarkMode}>{<Icon icon={!isDarkMode ? "sun" : "moon"} />}</button>
+        <button
+          className="bottom-1 bg-themeColor text-white z-50 text-themeColor fixed right-1 shadow-xl rounded-full h-10 w-10"
+          onClick={toggleDarkMode}
+        >
+          {<Icon icon={!isDarkMode ? "sun" : "moon"} />}
+        </button>
       </div>
     </>
   );
