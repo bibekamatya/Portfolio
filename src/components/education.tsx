@@ -28,14 +28,16 @@ const Education = () => {
               <h3 className="text-xl font-semibold text-themeColor">
                 {edu.degree}
               </h3>
-              <p className=" text-gray-400">
-                {edu.field && `${edu.field} | `}
-                {edu.board} | {edu.percentage}
-              </p>
-              <p className="text-gray-400">{edu.institution}</p>
-              <p className="text-sm text-gray-500">
-                {edu.address} {edu.year}
-              </p>
+              <div className="dark:text-gray-400 text-gray-500 text-center">
+                <p>
+                  {edu.field && `${edu.field} | `}
+                  {edu.board} | {edu.percentage}
+                </p>
+                <p>{edu.institution}</p>
+                <p className="text-sm dark:text-gray-500 text-gray-400 mt-1">
+                  {edu.address} {edu.year}
+                </p>
+              </div>
             </div>
           </motion.div>
         ))}

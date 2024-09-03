@@ -49,15 +49,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 lg:py-20">
+    <div className="dark:bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 lg:py-20">
       <Header header="Contact" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10">
           <div>
             <h2 className="font-heading font-bold tracking-tight text-3xl sm:text-5xl mb-6 text-themeColor">
               Get in Touch
             </h2>
-            <p className="mt-3 mb-8 text text-gray-300">
+            <p className="mt-3 mb-8 text dark:text-gray-300 text-gray-600">
               Whether you have a question, want to start a project, or simply
               want to connect, feel free to reach out. Let's collaborate and
               create something amazing together!
@@ -75,14 +75,16 @@ const Contact = () => {
                     <h3 className="text-lg font-medium text-themeColor">
                       {title}
                     </h3>
-                    <p className="text-gray-300">{content}</p>
+                    <p className="dark:text-gray-300 text-gray-500">
+                      {content}
+                    </p>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bg-gray-800 lg:p-8 p-4 rounded-lg shadow-lg">
-            <h2 className="mb-4 lg:text-2xl xl font-bold text-white">
+          <div className="dark:bg-gray-800 bg-white lg:p-8 p-4 rounded-lg shadow-lg">
+            <h2 className="mb-4 lg:text-2xl xl font-bold dark:text-gray-100 text-gray-500">
               Let's Begin Our Journey Together
             </h2>
             <form id="contactForm" onSubmit={handleSubmit}>
@@ -96,7 +98,7 @@ const Contact = () => {
                     id="name"
                     autoComplete="given-name"
                     placeholder="Your name"
-                    className="w-full rounded-md border border-gray-600 bg-gray-700 py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500"
+                    className="w-full rounded-md border border-gray-600 dark:bg-gray-700 py-3 px-4 text-white placeholder-gray-400"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -112,7 +114,7 @@ const Contact = () => {
                     id="email"
                     autoComplete="email"
                     placeholder="Your email address"
-                    className="w-full rounded-md border border-gray-600 bg-gray-700 py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500"
+                    className="w-full rounded-md border border-gray-600 dark:bg-gray-700 py-3 px-4 text-white placeholder-gray-400"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -127,7 +129,7 @@ const Contact = () => {
                     id="message"
                     name="message"
                     placeholder="Write your message..."
-                    className="w-full rounded-md border border-gray-600 bg-gray-700 py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500"
+                    className="w-full rounded-md border border-gray-600 dark:bg-gray-700 py-3 px-4 text-white placeholder-gray-400"
                     value={formData.message}
                     onChange={handleChange}
                     required
