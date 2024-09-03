@@ -1,8 +1,4 @@
-import Hero from "./components/hero";
-import Experiences from "./components/experiences";
-import Skills from "./components/skills";
-import Education from "./components/education";
-import Projects from "./components/projects";
+import Projects from "./components/landingPage/projects";
 import xoopcall from "./assets/xoopcall.png";
 import roomfinder from "./assets/roomfinder.png";
 import healt1 from "./assets/health1.png";
@@ -12,6 +8,10 @@ import outinvoice from "./assets/outinvoice.png";
 import merriment1 from "./assets/merriment1.png";
 import merriment2 from "./assets/merriment2.png";
 import merriment3 from "./assets/merriment3.png";
+import Hero from "./components/landingPage/hero";
+import Experiences from "./components/landingPage/experiences";
+import Skills from "./components/landingPage/skills";
+import Education from "./components/landingPage/education";
 
 export const NAVITEMS = [
   { title: "About", Component: Hero },
@@ -191,6 +191,7 @@ export const SKILLS_DATA = [
 
 export const PROJECTS_DATA = [
   {
+    details: true,
     title: "RoomFinder",
     type: "MERN App | Self-learning project",
     description: "A MERN stack application for finding and listing rooms.",
@@ -221,6 +222,7 @@ export const PROJECTS_DATA = [
     deployedLink: "https://deployed-link-roomfinder.com",
   },
   {
+    details: true,
     title: "Event Management System",
     type: "React App",
     description:
@@ -240,6 +242,7 @@ export const PROJECTS_DATA = [
     deployedLink: "https://deployed-link-event-management.com",
   },
   {
+    details: false,
     title: "Health Care System",
     type: "Static (UI) | Academic project",
     description:
@@ -251,6 +254,7 @@ export const PROJECTS_DATA = [
     images: [healt1, healt2, healt3],
   },
   {
+    details: false,
     title: "XoopCall",
     type: "React App",
     description:
@@ -262,6 +266,7 @@ export const PROJECTS_DATA = [
     images: [xoopcall],
   },
   {
+    details: true,
     title: "Merriment Travles",
     type: "React App",
     description:
@@ -273,6 +278,7 @@ export const PROJECTS_DATA = [
     images: [merriment1, merriment2, merriment3],
   },
   {
+    details: true,
     title: "OutInvoice",
     type: "React App",
     description:

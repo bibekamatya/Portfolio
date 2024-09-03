@@ -31,20 +31,21 @@ import {
   faComputer,
   faMoon,
   faSun,
+  faAngleDoubleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProps } from "../../interfaces";
+import { IconProps } from "../interfaces";
 
-import { ReactComponent as MuiIcon } from "../../assets/icon-materialui.svg";
-import { ReactComponent as TailwindIcon } from "../../assets/icon-tailwindcss.svg";
-import { ReactComponent as AntdIcon } from "../../assets/icon-ant-design.svg";
-import { ReactComponent as PostmanIcon } from "../../assets/icon-postman.svg";
-import { ReactComponent as GraphqlIcon } from "../../assets/icon-graphql.svg";
-import { ReactComponent as VercelIcon } from "../../assets/icon-vercel.svg";
-import { ReactComponent as JestIcon } from "../../assets/icon-jest.svg";
-import { ReactComponent as EslintIcon } from "../../assets/icon-eslint.svg";
-import { ReactComponent as TsIcon } from "../../assets/icon-ts.svg";
-import { ReactComponent as ReduxIcon } from "../../assets/icon-redux.svg";
+import { ReactComponent as MuiIcon } from "../assets/icon-materialui.svg";
+import { ReactComponent as TailwindIcon } from "../assets/icon-tailwindcss.svg";
+import { ReactComponent as AntdIcon } from "../assets/icon-ant-design.svg";
+import { ReactComponent as PostmanIcon } from "../assets/icon-postman.svg";
+import { ReactComponent as GraphqlIcon } from "../assets/icon-graphql.svg";
+import { ReactComponent as VercelIcon } from "../assets/icon-vercel.svg";
+import { ReactComponent as JestIcon } from "../assets/icon-jest.svg";
+import { ReactComponent as EslintIcon } from "../assets/icon-eslint.svg";
+import { ReactComponent as TsIcon } from "../assets/icon-ts.svg";
+import { ReactComponent as ReduxIcon } from "../assets/icon-redux.svg";
 
 const iconMap = {
   fileDownload: faFileArrowDown,
@@ -87,6 +88,7 @@ const iconMap = {
   eslint: EslintIcon,
   ts: TsIcon,
   redux: ReduxIcon,
+  arrowRight: faAngleDoubleRight,
 };
 
 export default function Icon({ icon, className = "" }: IconProps) {

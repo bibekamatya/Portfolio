@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TabButtonProps } from "../../../interfaces";
+import { TabButtonProps } from "../../interfaces";
 import Icon from "../Icons";
 
 const TabButton = ({ isActive, onClick, icon, title }: TabButtonProps) => {

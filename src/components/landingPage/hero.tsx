@@ -1,6 +1,6 @@
 import { Typewriter } from "react-simple-typewriter";
-import SocialButtons from "./reusable/socialButton";
-import myPhoto from "../assets/my-photo.jpeg";
+import myPhoto from "../../assets/my-photo.jpeg";
+import SocialButtons from "../socialButton";
 
 const Hero = () => {
   return (

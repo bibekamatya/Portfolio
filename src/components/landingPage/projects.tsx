@@ -1,12 +1,23 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Header } from "./reusable/header";
-import { PROJECTS_DATA } from "../dataSheet";
-import { useNavigate } from "react-router-dom";
+import { Header } from "../header";
+import { PROJECTS_DATA } from "../../dataSheet";
+import Modal from "../offCanvas";
+import { Project } from "../../interfaces";
 
 const Projects = () => {
   const [isHovered, setIsHovered] = useState<number | null>(null);
-  const navigate = useNavigate();
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const openModalWithProject = (project: Project) => {
+    setSelectedProject(project);
+    toggleModal();
+  };
 
   return (
     <>
@@ -39,20 +50,23 @@ const Projects = () => {
               <p className="text-sm text-gray-200 py-2 px-8 text-center">
                 {project.description}
               </p>
-              <button
-                onClick={() =>
-                  navigate(`/projects/${project.title.toLowerCase()}`, {
-                    state: project,
-                  })
-                }
-                className="px-3 py-1 border border-themeColor rounded-md mt-3 text-sm text-gray-100 hover:bg-themeColor transition duration-500"
-              >
-                Uncover More
-              </button>
+              {project.details && (
+                <button
+                  onClick={() => openModalWithProject(project)}
+                  className="px-3 py-1 border border-themeColor rounded-md mt-3 text-sm text-gray-100 hover:bg-themeColor transition duration-500"
+                >
+                  Uncover More
+                </button>
+              )}
             </motion.div>
           </div>
         ))}
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        toggleModal={toggleModal}
+        project={selectedProject}
+      />
     </>
   );
 };

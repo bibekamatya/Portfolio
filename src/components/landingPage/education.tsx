@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Header } from "./reusable/header";
-import Icon from "./reusable/Icons";
-import { EDUCATION_DATA } from "../dataSheet";
+import { Header } from "../header";
+import { EDUCATION_DATA } from "../../dataSheet";
+import Icon from "../Icons";
 
 const Education = () => {
   return (

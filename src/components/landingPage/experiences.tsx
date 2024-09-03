@@ -3,9 +3,9 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Icon from "./reusable/Icons";
-import { Header } from "./reusable/header";
-import { EXPERIENCES_DATA } from "../dataSheet";
+import { EXPERIENCES_DATA } from "../../dataSheet";
+import { Header } from "../header";
+import Icon from "../Icons";
 
 const Experiences = () => {
   return (

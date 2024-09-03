@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import TabContentInfoCard from "./tabContentInfoCard";
-import { TabContentProps } from "../../../interfaces";
+import { TabContentProps } from "../../interfaces";
 import Icon from "../Icons";
 
 const TabContent = ({ category, activeTab }: TabContentProps) => {

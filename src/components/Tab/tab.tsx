@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TabButton from "./tabButton";
 import TabContent from "./tabContent";
-import { TabbedContentProps } from "../../../interfaces";
+import { TabbedContentProps } from "../../interfaces";
 
 const Tab = ({ categories }: TabbedContentProps) => {
   const [activeTab, setActiveTab] = useState(0);

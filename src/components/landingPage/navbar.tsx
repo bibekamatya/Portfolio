@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-import { NAVITEMS } from "../dataSheet";
-import useDarkMode from "../hooks/useDarkmode";
-import Icon from "./reusable/Icons";
+import Icon from "./../Icons";
+import useDarkMode from "../../hooks/useDarkmode";
+import { NAVITEMS } from "../../dataSheet";
 const Navbar = () => {
   const [active, setActive] = useState("About");
   const [isDarkMode, toggleDarkMode] = useDarkMode();

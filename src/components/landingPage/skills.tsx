@@ -1,6 +1,6 @@
-import { SKILLS_DATA } from "../dataSheet";
-import { Header } from "./reusable/header";
-import Tab from "./reusable/Tab/tab";
+import { SKILLS_DATA } from "../../dataSheet";
+import { Header } from "./../header";
+import Tab from "./../Tab/tab";
 
 const Skills = () => {
   return (

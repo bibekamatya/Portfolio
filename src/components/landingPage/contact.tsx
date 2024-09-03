@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Icon from "./reusable/Icons";
-import { Header } from "./reusable/header";
-import { CONTACT_DETAILS } from "../dataSheet";
+import Icon from "./../Icons";
+import { Header } from "./../header";
+import { CONTACT_DETAILS } from "../../dataSheet";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -84,7 +84,7 @@ const Contact = () => {
             </ul>
           </div>
           <div className="dark:bg-gray-800 bg-white lg:p-8 p-4 rounded-lg shadow-lg">
-            <h2 className="mb-4 lg:text-2xl xl font-bold dark:text-gray-100 text-gray-500">
+            <h2 className="mb-4 lg:text-2xl xl font-bold dark:text-gray-100 text-themeColor">
               Let's Begin Our Journey Together
             </h2>
             <form id="contactForm" onSubmit={handleSubmit}>

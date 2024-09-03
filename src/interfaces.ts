@@ -49,3 +49,13 @@ export interface LogoData {
   src: string;
   alt: string;
 }
+
+export interface Project {
+  title: string;
+  type: string;
+  description: string;
+  features: string[];
+  technologies: string[];
+  images: string[];
+  deployedLink?: string;
+}

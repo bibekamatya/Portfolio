@@ -1,12 +1,20 @@
+import { Element } from "react-scroll";
+import { NAVITEMS as Sections } from "./dataSheet";
+import { SectionProps } from "./interfaces";
+import useDarkMode from "./hooks/useDarkmode";
+import { useEffect } from "react";
 import "./index.css";
 import "./App.css";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Details from "./components/details.tsx";
-import Index from "./index.tsx";
-import useDarkMode from "./hooks/useDarkmode.ts";
-import { useEffect } from "react";
+import Navbar from "./components/landingPage/navbar";
+import Contact from "./components/landingPage/contact";
 
-export const App = () => {
+const Section = ({ title, component }: SectionProps) => (
+  <Element name={title} className="section lg:pb-32 pb-20">
+    {component}
+  </Element>
+);
+
+const App = () => {
   const [isDarkMode] = useDarkMode();
 
   useEffect(() => {
@@ -19,13 +27,21 @@ export const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/projects/:name" element={<Details />} />
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      </BrowserRouter>
+      <Navbar />
+      <div className="lg:px-44 px-5 md:mt-16">
+        {Sections.map(({ title, Component }) => (
+          <div key={title}>
+            {Component && (
+              <Section key={title} title={title} component={<Component />} />
+            )}
+          </div>
+        ))}
+      </div>
+      <Element name="Contact" className="section">
+        <Contact />
+      </Element>
     </div>
   );
 };
+
+export default App;
