@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Header } from "../header";
 import { PROJECTS_DATA } from "../../dataSheet";
-import Modal from "../offCanvas";
+import Modal from "../modal";
 import { Project } from "../../interfaces";
 
 const Projects = () => {
