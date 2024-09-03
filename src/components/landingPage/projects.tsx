@@ -24,11 +24,14 @@ const Projects = () => {
       <Header header="Projects" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {PROJECTS_DATA.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="relative overflow-hidden grid custom-shadow rounded-lg"
             onMouseEnter={() => setIsHovered(index)}
             onMouseLeave={() => setIsHovered(null)}
+            initial={{ opacity: 0, y: 50 }} // Initial position for entrance
+            animate={{ opacity: 1, y: 0 }} // Animate to visible
+            transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered entrance
           >
             <img
               src={project.images[0]}
@@ -44,22 +47,44 @@ const Projects = () => {
               }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-lg mb-2 dark:text-themeColor text-white font-semibold dark:font-normal">
+              <motion.h3
+                className="text-lg mb-2 dark:text-themeColor text-white font-semibold dark:font-normal"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: isHovered === index ? 1 : 0,
+                  y: isHovered === index ? 0 : 20,
+                }}
+                transition={{ duration: 0.4 }}
+              >
                 {project.title}
-              </h3>
-              <p className="text-sm text-gray-200 py-2 px-8 text-center">
+              </motion.h3>
+              <motion.p
+                className="text-sm text-gray-200 py-2 px-8 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: isHovered === index ? 1 : 0,
+                  y: isHovered === index ? 0 : 20,
+                }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
                 {project.description}
-              </p>
+              </motion.p>
               {project.details && (
-                <button
+                <motion.button
                   onClick={() => openModalWithProject(project)}
                   className="px-3 py-1 border border-themeColor rounded-md mt-3 text-sm text-gray-100 hover:bg-themeColor transition duration-500"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{
+                    opacity: isHovered === index ? 1 : 0,
+                    scale: isHovered === index ? 1 : 0.8,
+                  }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
                 >
                   Uncover More
-                </button>
+                </motion.button>
               )}
             </motion.div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <Modal
