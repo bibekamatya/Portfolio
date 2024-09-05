@@ -47,7 +47,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }} // Adjusted delay
-          className="md:text-4xl text-xl font-bold text-orange-500/80 my-1"
+          className="md:text-4xl text-xl font-bold text-red-500/80 my-1"
         >
           Hom Narayan Amatya
         </motion.h3>

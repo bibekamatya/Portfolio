@@ -7,7 +7,7 @@ export const Header = ({ header, className }: HeaderProps) => (
   <div className="flex justify-center items-center mb-12">
     <div className="relative inline-flex group">
       <div
-        className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r dark:from-[#378a84] dark:to-[#2ba6a48d] from-[#e2e2e2] to-[#c0c0c0]
+        className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-b dark:from-lightBlue dark:to-darkBlue from-[#e2e2e2] to-[#c0c0c0]
  rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
       ></div>
       <div
