@@ -8,7 +8,7 @@ const TabButton = ({ isActive, onClick, icon, title }: TabButtonProps) => {
       <button
         onClick={onClick}
         className={`relative rounded-full font-medium dark:font-normal transition
-        ${isActive ? "text-themeColor dark:text-themeColor" : "dark:text-gray-400 text-gray-700"}
+        ${isActive ? "text-themeColor dark:text-themeColor" : "dark:md:text-gray-400 text-themeColor"}
         px-3 py-1.5
         flex items-center gap-2 justify-between`}
       >
