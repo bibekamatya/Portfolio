@@ -1,10 +1,15 @@
 import Projects from "./components/landingPage/projects";
 import xoopcall from "./assets/xoopcall.png";
-import roomfinder from "./assets/roomfinder.png";
+import roomfinder1 from "./assets/roomfinder-1.png";
+import roomfinder2 from "./assets/roomfinder-2.png";
+import roomfinder3 from "./assets/roomfinder-3.png";
+import roomfinder_list from "./assets/roomfinder-list.png";
+import roomfinder_signup from "./assets/roomfinder-signup.png";
 import healt1 from "./assets/health1.png";
 import healt2 from "./assets/health2.png";
 import healt3 from "./assets/health3.png";
-import outinvoice from "./assets/outinvoice.png";
+import outinvoice1 from "./assets/outinvoice-1.png";
+import outinvoice2 from "./assets/outinvoice-2.png";
 import merriment1 from "./assets/merriment1.png";
 import merriment2 from "./assets/merriment2.png";
 import merriment3 from "./assets/merriment3.png";
@@ -191,15 +196,26 @@ export const SKILLS_DATA = [
 
 export const PROJECTS_DATA = [
   {
-    details: true,
+    showDetails: true,
     title: "RoomFinder",
     type: "MERN App | Self-learning project",
-    description: "A MERN stack application for finding and listing rooms.",
-    features: [
-      "Implemented features such as search, filtering, user authentication, and role-based navigation for different user types (e.g., super admin, admins, users).",
-      "Integrated MongoDB for efficient data storage and retrieval.",
-      "Designed a responsive UI using React.js and Tailwind CSS, ensuring a seamless experience across devices.",
-      "Used TypeScript and optimized the application for performance, reducing load times and improving overall user experience.",
+    description:
+      "A MERN stack app for finding and listing rooms with advanced search features.",
+    overview:
+      "RoomFinder is a MERN stack application built to help users find rooms for rent and list their own properties. It features user authentication, search and filtering options, map integration, and a responsive design, providing a smooth user experience across devices.",
+    coreFeatures: [
+      "Implemented search and filtering capabilities for efficient room discovery.",
+      "User authentication and role-based navigation for secure access and management.",
+      "Integration with MongoDB for efficient data storage and retrieval.",
+      "Responsive design using React.js and Tailwind CSS for a seamless experience on all devices.",
+    ],
+    advancedFeatures: [
+      "Functionality for users to edit or delete their posts.",
+      "Enhanced search with criteria such as price range, location, tenant type, and room types.",
+      "Map integration for visualizing room locations.",
+      "Notification system for important alerts.",
+      "User profile management for updating personal and contact information.",
+      "Lightbox feature for full-screen image viewing.",
     ],
     technologies: [
       "React",
@@ -213,23 +229,42 @@ export const PROJECTS_DATA = [
       "JavaScript",
       "RESTful APIs",
       "JWT Authentication",
+      "Google Maps API",
     ],
+    development: {
+      tools: ["Visual Studio Code", "Postman", "Git", "Webpack"],
+      practices: [
+        "Adopted best practices for code quality and maintainability.",
+        "Used Git for version control and collaboration.",
+        "Applied continuous integration and deployment with GitHub Actions.",
+      ],
+    },
     images: [
-      roomfinder,
-      "https://images.unsplash.com/photo-1593642634311-48d3d1b9ccdd",
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+      roomfinder1,
+      roomfinder2,
+      roomfinder3,
+      roomfinder_list,
+      roomfinder_signup,
     ],
-    deployedLink: "https://deployed-link-roomfinder.com",
+    deployedLink: "https://roomfinder.vercel.app/",
   },
   {
-    details: true,
+    showDetails: true,
     title: "Event Management System",
     type: "React App",
     description:
       "React application for managing events, including creation and scheduling.",
-    features: [
+    overview:
+      "An event management system built with React to facilitate event creation, scheduling, and management. This application allows users to organize events easily while managing roles and notifications, ensuring smooth operation across multiple users.",
+    coreFeatures: [
       "Integrated frontend components with state management for real-time updates and dynamic user experiences.",
       "Implemented secure authentication and user roles for personalized access control.",
+    ],
+    advancedFeatures: [
+      "Advanced search and filtering options for events based on date, type, and location.",
+      "Real-time notifications and reminders for upcoming events.",
+      "Integration with calendar services for event synchronization.",
+      "User profile management and event history tracking.",
     ],
     technologies: [
       "React",
@@ -238,56 +273,83 @@ export const PROJECTS_DATA = [
       "Redux",
       "Redux Thunk",
     ],
-    images: [merriment3, merriment2],
-    deployedLink: "https://deployed-link-event-management.com",
+    images: [
+      "https://i.pinimg.com/736x/4b/92/43/4b924325613089a96886f1f64ce6d657.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw2uExbkbbRdV-w-08WOwBLQLIRXpzz0SkFrdYk6nYzuWQH76kUxG6sN4ar-9Pvy18D54&usqp=CAU",
+    ],
+    deployedLink: "https://eventmgmt.vercel.app/",
   },
   {
-    details: false,
+    showDetails: false,
     title: "Health Care System",
     type: "Static (UI) | Academic project",
     description:
-      "Designed a static user interface for a healthcare system using HTML and CSS.",
-    features: [
+      "Designed a static UI for a healthcare system using HTML and CSS.",
+    overview:
+      "A static user interface created for a healthcare system, focusing on a clean, responsive layout that allows users to access essential healthcare information easily.",
+    coreFeatures: [
       "Focused on delivering a clean layout and intuitive user experience.",
     ],
     technologies: ["HTML", "CSS"],
     images: [healt1, healt2, healt3],
   },
   {
-    details: false,
+    showDetails: false,
     title: "XoopCall",
     type: "React App",
-    description:
-      "React application for managing events, including creation and scheduling.",
-    features: [
-      "Focused on delivering a clean layout and intuitive user experience.",
+    description: "React application for managing call scheduling and tracking.",
+    overview:
+      "XoopCall is a React application developed to help users manage call scheduling and tracking. It allows real-time updates, call history management, and includes features for advanced call filtering and search.",
+    coreFeatures: [
+      "Efficient call scheduling and tracking system with a clean and intuitive UI.",
     ],
-    technologies: ["HTML", "CSS"],
+    advancedFeatures: [
+      "Real-time call updates and notifications.",
+      "Advanced call filtering and search options.",
+      "User profile and call history management.",
+    ],
+    technologies: ["React", "Redux", "Tailwind CSS"],
     images: [xoopcall],
   },
   {
-    details: true,
-    title: "Merriment Travles",
+    showDetails: true,
+    title: "Merriment Travels",
     type: "React App",
     description:
-      "React application for managing events, including creation and scheduling.",
-    features: [
-      "Focused on delivering a clean layout and intuitive user experience.",
+      "A React application for managing travel bookings and itineraries.",
+    overview:
+      "Merriment Travels is a travel management application that provides users with an easy way to book and manage their travel itineraries. The app supports real-time notifications, advanced search, and integration with third-party travel platforms.",
+    coreFeatures: [
+      "User-friendly interface for booking management.",
+      "Itinerary tracking with calendar integration.",
     ],
-    technologies: ["HTML", "CSS"],
+    advancedFeatures: [
+      "Real-time notifications for booking updates.",
+      "Advanced filtering for travel options based on user preferences.",
+      "Integration with external booking platforms and services.",
+    ],
+    technologies: ["React", "Tailwind CSS", "Redux"],
     images: [merriment1, merriment2, merriment3],
   },
   {
-    details: true,
+    showDetails: true,
     title: "OutInvoice",
     type: "React App",
     description:
-      "React application for managing events, including creation and scheduling.",
-    features: [
-      "Focused on delivering a clean layout and intuitive user experience.",
+      "A React app for managing invoices and billing with customizable templates.",
+    overview:
+      "OutInvoice simplifies the invoice and billing process by offering customizable templates, real-time invoice tracking, and integration with payment gateways. The app is designed to improve efficiency in managing business transactions.",
+    coreFeatures: [
+      "Simplified invoice creation and management.",
+      "Real-time tracking of billing statuses.",
     ],
-    technologies: ["HTML", "CSS"],
-    images: [outinvoice],
+    advancedFeatures: [
+      "Automated invoice generation based on user input.",
+      "Customizable templates for invoicing.",
+      "Integration with third-party payment gateways.",
+    ],
+    technologies: ["React", "Tailwind CSS", "Redux"],
+    images: [outinvoice1, outinvoice2],
   },
 ];
 

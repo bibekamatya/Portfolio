@@ -54,8 +54,14 @@ export interface Project {
   title: string;
   type: string;
   description: string;
-  features: string[];
+  coreFeatures?: string[];
+  advancedFeatures?: string[];
   technologies: string[];
   images: string[];
   deployedLink?: string;
+  overview?: string;
+  development?: {
+    tools: string[];
+    practices: string[];
+  };
 }

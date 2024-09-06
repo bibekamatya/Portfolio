@@ -2,21 +2,21 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Header } from "../header";
 import { PROJECTS_DATA } from "../../dataSheet";
-import Modal from "../modal";
+import Canvas from "../canvas";
 import { Project } from "../../interfaces";
 
 const Projects = () => {
   const [isHovered, setIsHovered] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCanvasOpen, setIsCanvasOpen] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
+  const toggleCanvas = () => {
+    setIsCanvasOpen(!isCanvasOpen);
   };
 
-  const openModalWithProject = (project: Project) => {
+  const openCanvasWithProject = (project: Project) => {
     setSelectedProject(project);
-    toggleModal();
+    toggleCanvas();
   };
 
   return (
@@ -69,9 +69,9 @@ const Projects = () => {
               >
                 {project.description}
               </motion.p>
-              {project.details && (
+              {project.showDetails && (
                 <motion.button
-                  onClick={() => openModalWithProject(project)}
+                  onClick={() => openCanvasWithProject(project)}
                   className="px-3 py-1 border border-themeColor rounded-md mt-3 text-sm text-gray-100 hover:bg-themeColor transition duration-500"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{
@@ -87,9 +87,9 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
-      <Modal
-        isOpen={isModalOpen}
-        toggleModal={toggleModal}
+      <Canvas
+        isOpen={isCanvasOpen}
+        toggleCanvas={toggleCanvas}
         project={selectedProject}
       />
     </>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const ImageViewer = ({
   images,
@@ -16,6 +17,24 @@ const ImageViewer = ({
   onPrev: () => void;
 }) => {
   if (!isOpen) return null;
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") {
+        onNext();
+      } else if (event.key === "ArrowLeft") {
+        onPrev();
+      }
+    };
+
+    // Add event listener on mount
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Remove event listener on cleanup
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onNext, onPrev]);
 
   return (
     <motion.div
