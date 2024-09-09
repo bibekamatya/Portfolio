@@ -13,6 +13,10 @@ import outinvoice2 from "./assets/outinvoice-2.png";
 import merriment1 from "./assets/merriment1.png";
 import merriment2 from "./assets/merriment2.png";
 import merriment3 from "./assets/merriment3.png";
+import event1 from "./assets/event1.png";
+import event2 from "./assets/event2.png";
+import event3 from "./assets/event3.png";
+
 import Hero from "./components/landingPage/hero";
 import Experiences from "./components/landingPage/experiences";
 import Skills from "./components/landingPage/skills";
@@ -253,7 +257,7 @@ export const PROJECTS_DATA = [
     title: "Event Management System",
     type: "React App",
     description:
-      "React application for managing events, including creation and scheduling.",
+      "A React application for managing events, including creation and scheduling.",
     overview:
       "An event management system built with React to facilitate event creation, scheduling, and management. This application allows users to organize events easily while managing roles and notifications, ensuring smooth operation across multiple users.",
     coreFeatures: [
@@ -273,20 +277,17 @@ export const PROJECTS_DATA = [
       "Redux",
       "Redux Thunk",
     ],
-    images: [
-      "https://i.pinimg.com/736x/4b/92/43/4b924325613089a96886f1f64ce6d657.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw2uExbkbbRdV-w-08WOwBLQLIRXpzz0SkFrdYk6nYzuWQH76kUxG6sN4ar-9Pvy18D54&usqp=CAU",
-    ],
+    images: [event1, event2, event3],
     deployedLink: "https://eventmgmt.vercel.app/",
   },
   {
     showDetails: false,
     title: "Health Care System",
-    type: "Static (UI) | Academic project",
+    type: "",
     description:
-      "Designed a static UI for a healthcare system using HTML and CSS.",
+      "React-based application designed for managing health and medical history records efficiently.",
     overview:
-      "A static user interface created for a healthcare system, focusing on a clean, responsive layout that allows users to access essential healthcare information easily.",
+      "A user interface created for a healthcare system, focusing on a clean, responsive layout that allows users to access essential healthcare information easily.",
     coreFeatures: [
       "Focused on delivering a clean layout and intuitive user experience.",
     ],
@@ -297,9 +298,9 @@ export const PROJECTS_DATA = [
     showDetails: false,
     title: "XoopCall",
     type: "React App",
-    description: "React application for managing call scheduling and tracking.",
+    description: "React application for communicate with users.",
     overview:
-      "XoopCall is a React application developed to help users manage call scheduling and tracking. It allows real-time updates, call history management, and includes features for advanced call filtering and search.",
+      "XoopCall is a React application developed to communicate with users. It allows real-time updates, and includes features for advanced user and message filtering and search.",
     coreFeatures: [
       "Efficient call scheduling and tracking system with a clean and intuitive UI.",
     ],
@@ -330,6 +331,7 @@ export const PROJECTS_DATA = [
     ],
     technologies: ["React", "Tailwind CSS", "Redux"],
     images: [merriment1, merriment2, merriment3],
+    deployedLink: "https://merrimenttravels.com/",
   },
   {
     showDetails: true,
@@ -348,7 +350,7 @@ export const PROJECTS_DATA = [
       "Customizable templates for invoicing.",
       "Integration with third-party payment gateways.",
     ],
-    technologies: ["React", "Tailwind CSS", "Redux"],
+    technologies: ["React", "Bootstrap 5", "Redux"],
     images: [outinvoice1, outinvoice2],
   },
 ];

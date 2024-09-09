@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Header } from "../header";
 import { PROJECTS_DATA } from "../../dataSheet";
 import Canvas from "../canvas";
@@ -14,9 +14,19 @@ const Projects = () => {
     setIsCanvasOpen(!isCanvasOpen);
   };
 
-  const openCanvasWithProject = (project: Project) => {
+  // Memoize function for performance improvement
+  const openCanvasWithProject = useCallback((project: Project) => {
     setSelectedProject(project);
     toggleCanvas();
+  }, []);
+
+  // Handle mobile click interaction
+  const handleMobileClick = (index: number) => {
+    if (isHovered === index) {
+      setIsHovered(null); // Hide on second tap
+    } else {
+      setIsHovered(index); // Show on tap
+    }
   };
 
   return (
@@ -29,14 +39,17 @@ const Projects = () => {
             className="relative overflow-hidden grid custom-shadow rounded-lg"
             onMouseEnter={() => setIsHovered(index)}
             onMouseLeave={() => setIsHovered(null)}
+            onClick={() => handleMobileClick(index)} // Mobile friendly interaction
             initial={{ opacity: 0, y: 50 }} // Initial position for entrance
             animate={{ opacity: 1, y: 0 }} // Animate to visible
             transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered entrance
           >
             <img
+              loading="lazy" // Lazy loading for performance
               src={project.images[0]}
               alt={project.title}
               className="h-full max-w-full rounded-lg"
+              onError={(e) => (e.currentTarget.src = "/default-image.jpg")} // Fallback image
             />
             <motion.div
               className="absolute inset-0 flex flex-col items-center justify-center rounded bg-black bg-opacity-70"

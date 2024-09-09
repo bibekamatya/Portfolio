@@ -41,7 +41,10 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={toggleCanvas}
+          onClick={() => {
+            toggleCanvas();
+            setIsViewerOpen(false);
+          }}
         ></div>
       )}
 
