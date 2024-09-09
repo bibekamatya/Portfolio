@@ -2,6 +2,7 @@ import { Typewriter } from "react-simple-typewriter";
 import myPhoto from "../../assets/my-photo.jpeg";
 import SocialButtons from "../socialButton";
 import { motion } from "framer-motion";
+import bg from "../../assets/bg.jpg"
 
 const textVariants = {
   hidden: (direction: any) => ({
@@ -98,7 +99,7 @@ const Hero = () => {
         <div className="rounded-t-lg h-40 overflow-hidden md:hidden">
           <img
             className="object-cover object-top w-full"
-            src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+            src={bg}
             alt="Mountain"
           />
         </div>
