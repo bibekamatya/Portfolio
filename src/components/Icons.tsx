@@ -32,6 +32,7 @@ import {
   faMoon,
   faSun,
   faAngleDoubleRight,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProps } from "../interfaces";
@@ -89,6 +90,7 @@ const iconMap = {
   ts: TsIcon,
   redux: ReduxIcon,
   arrowRight: faAngleDoubleRight,
+  close: faXmark,
 };
 
 export default function Icon({ icon, className = "" }: IconProps) {

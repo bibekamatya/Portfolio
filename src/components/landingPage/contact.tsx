@@ -139,7 +139,7 @@ const Contact = () => {
               <div className="text-center mt-6">
                 <button
                   type="submit"
-                  className="w-full bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-md transition ease-in-out duration-300"
+                  className="w-full bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full transition ease-in-out duration-300"
                   disabled={status === "loading"}
                 >
                   {status === "loading" ? "Sending..." : "Send Message"}

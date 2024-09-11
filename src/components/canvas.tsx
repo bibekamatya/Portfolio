@@ -156,17 +156,16 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
             </a>
           )}
         </div>
-
-        {/* Image Viewer */}
-        <ImageViewer
-          images={project.images}
-          isOpen={isViewerOpen}
-          currentIndex={currentIndex}
-          onClose={closeImageViewer}
-          onNext={nextImage}
-          onPrev={prevImage}
-        />
       </div>
+      {/* Image Viewer */}
+      <ImageViewer
+        images={project.images}
+        isOpen={isViewerOpen}
+        currentIndex={currentIndex}
+        onClose={closeImageViewer}
+        onNext={nextImage}
+        onPrev={prevImage}
+      />
     </>
   );
 };

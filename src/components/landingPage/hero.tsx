@@ -2,7 +2,7 @@ import { Typewriter } from "react-simple-typewriter";
 import myPhoto from "../../assets/my-photo.jpeg";
 import SocialButtons from "../socialButton";
 import { motion } from "framer-motion";
-import bg from "../../assets/bg.jpg"
+import bg from "../../assets/bg.jpg";
 
 const textVariants = {
   hidden: (direction: any) => ({

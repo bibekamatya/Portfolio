@@ -1,10 +1,10 @@
+import "./index.css";
+import "./App.css";
 import { Element } from "react-scroll";
 import { NAVITEMS as Sections } from "./dataSheet";
 import { SectionProps } from "./interfaces";
 import useDarkMode from "./hooks/useDarkmode";
 import { useEffect } from "react";
-import "./index.css";
-import "./App.css";
 import Navbar from "./components/landingPage/navbar";
 import Contact from "./components/landingPage/contact";
 
@@ -26,7 +26,7 @@ const App = () => {
   }, [isDarkMode]);
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-zinc-50 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
       <Navbar />
       <div className="lg:px-44 px-5 md:mt-16">
         {Sections.map(({ title, Component }) => (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import Icon from "./Icons";
 
 const ImageViewer = ({
   images,
@@ -50,19 +51,19 @@ const ImageViewer = ({
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         <button
-          className="absolute top-2 right-4 text-white text-2xl"
+          className="absolute top-2 right-2 text-white rounded-full bg-black text-2xl flex p-1"
           onClick={onClose}
         >
-          &times;
+          <Icon icon="close" className="w-4 h-4" />
         </button>
         <button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-themeColor text-2xl"
           onClick={onPrev}
         >
           &#10094;
         </button>
         <button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-themeColor text-2xl"
           onClick={onNext}
         >
           &#10095;
