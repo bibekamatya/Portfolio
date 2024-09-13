@@ -46,7 +46,7 @@ const Projects = () => {
           >
             <img
               loading="lazy" // Lazy loading for performance
-              src={project.images[0]}
+              src={project.displayImage}
               alt={project.title}
               className="h-full max-w-full rounded-lg"
               onError={(e) => (e.currentTarget.src = "/default-image.jpg")} // Fallback image

@@ -52,8 +52,8 @@ export interface LogoData {
 
 export interface Project {
   title: string;
-  type: string;
-  description: string;
+  type?: string;
+  description?: string;
   coreFeatures?: string[];
   advancedFeatures?: string[];
   technologies: string[];

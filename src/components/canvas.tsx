@@ -98,7 +98,7 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
             Technologies Used:
           </h3>
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.technologies.map((tech, index) => (
+            {project?.technologies.map((tech, index) => (
               <span
                 key={index}
                 className="bg-gray-200 dark:bg-lightBlue dark:text-gray-300 text-gray-700 px-3 py-1 rounded-full text-sm"

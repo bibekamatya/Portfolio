@@ -1,21 +1,29 @@
 import Projects from "./components/landingPage/projects";
 import xoopcall from "./assets/xoopcall.png";
-import roomfinder1 from "./assets/roomfinder-1.png";
-import roomfinder2 from "./assets/roomfinder-2.png";
-import roomfinder3 from "./assets/roomfinder-3.png";
-import roomfinder_list from "./assets/roomfinder-list.png";
-import roomfinder_signup from "./assets/roomfinder-signup.png";
+
 import healt1 from "./assets/health1.png";
-import healt2 from "./assets/health2.png";
-import healt3 from "./assets/health3.png";
+
+import rfDashboard from "./assets/rf-dashboard.png";
+import rfHome from "./assets/rf-home.png";
+import rfDisplay from "./assets/rf-display.png";
+import rfDetails from "./assets/rf-details.png";
+import rfList from "./assets/rf-list.png";
+
 import outinvoice1 from "./assets/outinvoice-1.png";
 import outinvoice2 from "./assets/outinvoice-2.png";
-import merriment1 from "./assets/merriment1.png";
-import merriment2 from "./assets/merriment2.png";
-import merriment3 from "./assets/merriment3.png";
-import event1 from "./assets/event1.png";
-import event2 from "./assets/event2.png";
-import event3 from "./assets/event3.png";
+
+import merrimentDisplay from "./assets/merriment-display.png";
+import merrimentHome from "./assets/merriment-home.png";
+import merrimentPlaceDetail from "./assets/merriment-place-detail.png";
+import merrimentBlogs from "./assets/merriment-blogs.png";
+import merrimentBlogDetails from "./assets/merriment-blog-details.png";
+
+import eventForm from "./assets/event-form.png";
+import eventDashboard from "./assets/event-dashboard.png";
+import eventDisplay from "./assets/event-home-display.png";
+import eventHome from "./assets/event-home.png";
+import eventCategoryWise from "./assets/event-category-wise.png";
+import eventDetails from "./assets/event-details.png";
 
 import Hero from "./components/landingPage/hero";
 import Experiences from "./components/landingPage/experiences";
@@ -243,13 +251,8 @@ export const PROJECTS_DATA = [
         "Applied continuous integration and deployment with GitHub Actions.",
       ],
     },
-    images: [
-      roomfinder1,
-      roomfinder2,
-      roomfinder3,
-      roomfinder_list,
-      roomfinder_signup,
-    ],
+    displayImage: rfDisplay,
+    images: [rfHome, rfDashboard, rfDetails, rfList],
     deployedLink: "https://roomfinder.vercel.app/",
   },
   {
@@ -277,13 +280,20 @@ export const PROJECTS_DATA = [
       "Redux",
       "Redux Thunk",
     ],
-    images: [event1, event2, event3],
+    displayImage: eventDisplay,
+    images: [
+      eventHome,
+      eventCategoryWise,
+      eventDetails,
+      eventDashboard,
+      eventForm,
+    ],
     deployedLink: "https://eventmgmt.vercel.app/",
   },
   {
     showDetails: false,
     title: "Health Care System",
-    type: "",
+    type: "React App",
     description:
       "React-based application designed for managing health and medical history records efficiently.",
     overview:
@@ -291,8 +301,9 @@ export const PROJECTS_DATA = [
     coreFeatures: [
       "Focused on delivering a clean layout and intuitive user experience.",
     ],
-    technologies: ["HTML", "CSS"],
-    images: [healt1, healt2, healt3],
+    technologies: ["React.Js", "Tailwind CSS"],
+    displayImage: healt1,
+    images: [healt1],
   },
   {
     showDetails: false,
@@ -310,6 +321,7 @@ export const PROJECTS_DATA = [
       "User profile and call history management.",
     ],
     technologies: ["React", "Redux", "Tailwind CSS"],
+    displayImage: xoopcall,
     images: [xoopcall],
   },
   {
@@ -330,7 +342,13 @@ export const PROJECTS_DATA = [
       "Integration with external booking platforms and services.",
     ],
     technologies: ["React", "Tailwind CSS", "Redux"],
-    images: [merriment1, merriment2, merriment3],
+    displayImage: merrimentDisplay,
+    images: [
+      merrimentHome,
+      merrimentPlaceDetail,
+      merrimentBlogs,
+      merrimentBlogDetails,
+    ],
     deployedLink: "https://merrimenttravels.com/",
   },
   {
@@ -351,6 +369,7 @@ export const PROJECTS_DATA = [
       "Integration with third-party payment gateways.",
     ],
     technologies: ["React", "Bootstrap 5", "Redux"],
+    displayImage: outinvoice1,
     images: [outinvoice1, outinvoice2],
   },
 ];
