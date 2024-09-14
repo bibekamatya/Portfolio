@@ -76,7 +76,7 @@ const Hero = () => {
           transition={{ delay: 0.9 }} // Adjusted delay
           className="mt-4 text-justify dark:text-gray-300 text-gray-700"
         >
-          I'm a UI/UX Developer who creates engaging and user-friendly
+          I'm a Frontend Developer who creates engaging and user-friendly
           interfaces. I blend design and development skills to deliver seamless,
           intuitive experiences. Passionate about turning ideas into elegant
           solutions.
