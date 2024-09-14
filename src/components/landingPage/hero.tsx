@@ -61,7 +61,7 @@ const Hero = () => {
           className="md:text-2xl md:mt-2 font-semibold text-themeColor"
         >
           <Typewriter
-            words={["UI/UX Developer"]}
+            words={["Frontend Developer"]}
             loop={Infinity} // Loop indefinitely
             typeSpeed={100} // Typing speed in milliseconds
             deleteSpeed={50} // Deleting speed in milliseconds
