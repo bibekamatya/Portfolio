@@ -383,7 +383,7 @@ export const CONTACT_DETAILS = [
   {
     icon: "email",
     title: "Email",
-    content: "narayanhom@gmail.com",
+    content: "amatyahom@gmail.com",
   },
   {
     icon: "phone",
